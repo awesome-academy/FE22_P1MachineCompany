@@ -1,0 +1,256 @@
+
+.header {
+    &__navigation {
+        display: flex;
+        height: 49px;
+        line-height: 49px;
+        width: 100%;
+        max-width: 1140px;
+        margin: 0 auto;
+        &--wrapper {
+            @include wrapper($--bg--secondary,1rem);
+            border-bottom: 1px solid $--border--slide;
+        }
+        & > * {
+            border-left: 1px solid $--border--slide;
+        }
+        &--social {
+            width: 4.9rem;
+            font-size: 1.3rem;
+            height: 100%;
+            text-align: center;
+            color: $--border--nav;
+            display: none;
+            &:nth-child(4) {
+                border-right: 1px solid $--border--slide;
+            }
+            &:hover {
+                @include hover__primary;
+            }
+        }
+        .login {
+            width: 100%;
+            //max-width: 195px;
+            margin-left: 0;
+            font-weight: bold;
+            display: flex;
+                text-align: center;
+            &__btn {
+                width: 50%;
+                margin-left: auto;
+                height: 100%;
+                @include heading(1.2rem, #363636, bold);
+                a {
+                    color: #363636;
+                    padding: 0 2.1rem;
+                }
+                &:hover {
+                    @include hover__primary;
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+            &__btn:last-child {
+                border-right: 1px solid $--border--slide;
+                border-left: 1px solid $--border--slide;
+            }
+        }
+        
+    }
+    &__center {
+        margin: 0 auto;
+        max-width: 1140px;
+        &--wrapper {
+            @include wrapper($--white, 1rem);
+        }
+        &-logo {
+            margin: 0 auto 1.5rem;
+        }
+        &-middle {
+            align-items: center;
+            display: none;
+        }
+        &-contact:first-child {
+            margin-right: 55px;
+        }
+        &-heading {
+            @include heading(1.4rem, $--primary, bold);
+        }
+        &-phone {
+            @include heading(1.4rem, $--border, normal);
+        }
+        .header__search-form {
+            position: relative;
+            width: 90%;
+            height: 4.8rem;
+            margin: 0 auto;
+            &__input {
+                width: 100%;
+                height: 100%;
+                padding-left: 2rem;
+                border: 1px solid $--border;
+                border-radius: 999px;
+                position: relative;
+            }
+            &__btn {
+                position: absolute;
+                color: $--border;
+                font-size: 1.6rem;
+                right: 13px;
+                top: 35%;
+            }
+        }
+    }
+    
+    &__navbar {
+        font-size: 1.2rem;
+        width: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+        max-width: 1140px;
+        &--wrapper {
+            @include wrapper($--secondary,2rem);
+        }
+        &__menu {
+            &-item {
+                float: left;
+                display: block;
+                text-transform: uppercase;
+                color:#fff;
+                padding: 2.5rem 2rem;
+                &:hover {
+                    @include hover__primary;
+                }
+                &:first-child {
+                    font-size: 2rem;
+                    width: 7.2rem;
+                    display: none;
+                    text-align: center;
+                    @include responsive_320(){
+                        display: block;
+                        border-right: 1px solid $--border--nav;
+                    }
+                }
+                & + &{
+                    @include responsive_320(){
+                        display: none;
+                        float: left;
+                    }
+                }
+            }
+        }
+        .responsive {
+            display: flex;
+            flex-direction: column;
+            @include responsive_320(){
+                position: relative;
+                .header__navbar__menu-item {
+                    &:first-child {
+                        left: 0;
+                        top: 0;
+                    }
+                    display: block;
+                    text-align: center;
+                    float: none;
+                }
+            }
+        }
+        &__cart {
+            font-size: 2rem;
+            width: 6.6rem;
+            text-align: center;
+            float: right;
+            color: #fff;
+            border-left: 1px solid $--border--nav;
+            padding: 2.5rem 2rem;
+            position: relative;
+            &::after {
+                position: absolute;
+                content: "0";
+                font-size: 1.4rem;
+                color: #fff;
+                line-height: 2.2rem;
+                background: $--primary;
+                width: 2.2rem;
+                height: 2.2rem;
+                border-radius: 50%;
+                top: 23%;
+                left: 46%;
+            }
+            &:hover {
+                @include hover__primary;
+            }
+        }
+    }
+    @include responsive_320{
+        &__navigation {
+            width: auto;
+        }
+    }
+    @include responsive_480{
+        &__navigation--social {
+            display: block;
+        }
+        .login {
+            margin: 0;
+            width: fit-content;
+            margin-left: auto;
+                &__btn {
+                    width: 0;
+                    width: fit-content;
+                }
+            }
+    }
+    @include responsive_768{
+        &__center {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &-logo {
+                margin: 0;
+            }
+            &-middle {
+                display: block;
+            }
+        }
+        .header__search-form {
+            width: 320px;
+            margin: 0;
+        }
+        &__center {
+            //width: 100%;
+            &-middle {
+                display: none;
+            }
+        }
+        &__navbar {
+            display: flex;
+            width: 90%;
+            justify-content: space-between;
+            align-items: center;
+            &__menu {
+                &-item {
+                    padding: 2.8rem 2rem;
+                    &:first-child {
+                        display: none;
+                    }
+                    & + & {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 1140px) {
+        &__center {
+            &-middle {
+                display: flex;
+            }
+        }
+        &__navbar {
+            font-size: 1.4rem;
+        }
+    }
+}

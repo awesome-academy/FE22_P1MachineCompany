@@ -1,0 +1,46 @@
+- var lorem = "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment...";
+include section__head.pug
+mixin cardWidth(img, title, star, rate, text, price)
+    .card-width
+        .card
+            .card__img
+                img.card__img-img(src= img)
+            .card__content
+                p.card__title= title
+                .card__evaluate
+                    -for(var i = 0; i<star; i++){
+                        i.fas.fa-star.card__evaluate-star
+                    -}
+                    p.card__evaluate-rate (#{rate}) đánh giá
+                p.card__text= text
+                h3.card__price= price
+                .card__btn
+                    a(href="#").card__btn--buy mua ngay
+                    a(href="#").card__btn--info xem chi tiết
+section.section-newreceive
+    +sectionHead("fas fa-th-large", "hàng mới về")               
+    .newreceive-grid
+        +cardWidth("../imgs/new--receive/new--receive-1.png",
+                "máy khoan CNC 3D",
+                4,
+                12,
+                lorem,
+                "2.350.000 Đ")
+        +cardWidth("../imgs/new--receive/new--receive-2.png",
+                "máy khoan CNC 3D",
+                4,
+                12,
+                lorem,
+                "2.350.000 Đ")
+        +cardWidth("../imgs/new--receive/new--receive-3.png",
+                "máy khoan CNC 3D",
+                4,
+                12,
+                lorem,
+                "2.350.000 Đ")
+        +cardWidth("../imgs/new--receive/new--receive-4.png",
+                "máy khoan CNC 3D",
+                4,
+                12,
+                lorem,
+                "2.350.000 Đ")

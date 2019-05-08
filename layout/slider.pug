@@ -1,0 +1,17 @@
+.slider#slider
+    input#i1(type="radio", name="images" checked)
+    input#i2(type="radio", name="images")
+    input#i3(type="radio", name="images")
+    .slider__img#one
+        img.slider__img-move(src="../imgs/slider.png",
+         alt="" onclick="changeIt(1)")
+    .slider__img#two
+        img.slider__img-move(src="../imgs/slider.png",
+         alt="" onclick="changeIt(2)")
+    .slider__img#three
+        img.slider__img-move(src="../imgs/slider.png",
+         alt="" onclick="changeIt(3)")
+    .slider__nav#slider__nav
+        label.slider__nav__dots#dot1(for="i1")
+        label.slider__nav__dots#dot2(for="i2")
+        label.slider__nav__dots#dot3(for="i3")

@@ -1,0 +1,13 @@
+include _var__category.pug
+mixin sectionHead(icon, title, category)
+    .section__heading
+        .section__heading__left
+            i(class= icon)
+            p.heading__title= title
+        .section__heading__right
+            if category 
+                each val in category
+                    a.heading-category.border-89= val
+            i.fas.fa-caret-left.border-89
+            i.fas.fa-caret-right.border-89
+//- +sectionHead("fas fa-th-large", "sản phẩm nổi bật")

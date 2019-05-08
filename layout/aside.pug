@@ -1,0 +1,16 @@
+include _var__aside.pug
+mixin asideList(iconTitle, title, icon, text)
+    ul.aside__list#aside__list
+        if title
+            li.aside__list-item.active
+                i(class= iconTitle)
+                a.aside__text= title
+        each val in text
+            li.aside__list-item
+                i(class= icon)
+                a.aside__text(href="#")= val
+aside.aside
+    +asideList("fas fa-bars",
+                "DANH MỤC SẢN PHẨM",
+                "fas fa-th-large",
+                productPortfolio)

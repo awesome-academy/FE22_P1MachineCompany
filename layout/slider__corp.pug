@@ -1,0 +1,14 @@
+mixin slider(...list)
+    each val in list
+        li.slider-corp__list-item
+            img(src= val)
+section.slider__corp
+    .slider-corp
+        button#btn__left.slider-corp__btn(onclick="moveLeft()") &#10092;
+        ul.slider-corp__list#slider-corp__list
+            +slider("../imgs/corp/corp--1.png",
+                    "../imgs/corp/corp--2.png",
+                    "../imgs/corp/corp--3.png",
+                    "../imgs/corp/corp--4.png",
+                    "../imgs/corp/corp--5.png")
+        button#btn__right.slider-corp__btn(onclick="moveRight()") &#10093;

@@ -1,0 +1,10 @@
+@mixin hover__primary {
+    transition: .7s;
+    background-color: $--primary;
+    color: #fff;
+}
+@mixin hover__secondary {
+    transition: .7s;
+    background-color: $--secondary;
+    color: #fff;
+}
