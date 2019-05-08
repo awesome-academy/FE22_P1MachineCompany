@@ -1,0 +1,46 @@
+include _var__footer.pug
+mixin unit(heading, text,icon, type)
+    .footer__top__block
+        .footer__top__heading
+            i.fas.fa-th-large
+            h2.title= heading
+        .footer__top__content
+            -for(var i=0; i<text.length; i++){
+                if icon
+                    div.footer__top__content--mt23
+                        i(class= icon[i])
+                        a= text[i]
+                else
+                    div.footer__top__content--mt23
+                        a= text[i]
+            -}
+mixin ad(icon, title, phone)
+    .advisory
+        .advisory__icon--radius
+            i(class= icon)
+        .advisory__content
+            p.advisory__content-title= title
+            h3.advisory__content-phone= phone
+footer.footer-wrapper
+    .footer
+        .footer__top
+            +unit("về chúng tôi", about, aboutIcon)
+            +unit('chính sách', policy)
+            +unit("dịch vụ & hỗ trợ", service)
+            +unit("tin tức -  sự kiện", news)
+            +unit("kết nôi", contact, contactIcon)
+        .footer__bottom
+            .footer__bottom__pay
+                p.footer__bottom__title Thanh toán :
+                .pay__grid
+                    each val in pay
+                        img(src= val)
+            .footer__bottom__ad
+                p.footer__bottom__title Giải đáp nhanh :
+                +ad("fas fa-phone rotate90",
+                    "Tư vấn miễn phí (24/7)",
+                    "1900 650 650")
+                +ad("fas fa-comments",
+                    "Góp ý - phản hồi - thắc mắc",
+                    "1900 650 650")
+                

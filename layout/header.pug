@@ -1,0 +1,34 @@
+header.header
+    .header__navigation--wrapper
+        .header__navigation
+            a.header__navigation--social(href='#'): i.fab.fa-facebook-f
+            a.header__navigation--social(href='#'): i.fab.fa-google-plus-g
+            a.header__navigation--social(href='#'): i.fab.fa-instagram
+            a.header__navigation--social(href='#'): i.fab.fa-twitter
+            .header__navigation__form.login
+                .login__btn: a( href='#' title='Đăng kí') đăng kí
+                .login__btn: a( href='#' title='Đăng nhập') đăng nhập
+    .header__center--wrapper
+        .header__center
+            img.header__center-logo(src="../imgs/Logo.png")
+            .header__center-middle
+                .header__center-contact
+                    h2.header__center-heading hotline :
+                    p.header__center-phone (04) 9500 9650 - (04) 9500 8850 
+                .header__center-contact
+                    h2.header__center-heading đặt hàng nhanh :
+                    p.header__center-phone (04) 9500 9650 - (04) 9500 8850 
+            .header__center-form.header__search-form
+                input.header__search-form__input(placeholder="Tìm kiếm...")
+                i.fas.fa-search.header__search-form__btn
+    .header__navbar--wrapper
+        .header__navbar
+            nav.header__navbar__menu#collapse
+                a.header__navbar__menu-item(onclick="myFunc()"): i.fa.fa-bars
+                a.header__navbar__menu-item(href='#') trang chủ
+                a.header__navbar__menu-item(href='#') giới thiệu
+                a.header__navbar__menu-item(href="#") sản phẩm
+                a.header__navbar__menu-item(href='#') tin khuyến mại
+                a.header__navbar__menu-item(href='#') dịch vụ
+                a.header__navbar__menu-item(href='#') liên hệ
+            i.header__navbar__cart.fas.fa-shopping-basket

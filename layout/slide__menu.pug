@@ -1,0 +1,10 @@
+include variable__slide
+.slide-menu
+    ul.menu__list
+        - for(var i=0; i<4;i++){
+            li.menu__list-item.list-item
+                i.list-item__icon(class= icon[i])
+                div
+                    h1.list-item__title= title[i]
+                    p.list-item__parap= parap[i]
+        -}
