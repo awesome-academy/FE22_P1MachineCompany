@@ -1,0 +1,67 @@
+.banner-bottom {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+    color: #111;
+    text-align: center;
+    background: $--bg--secondary;
+    &__img{
+        width: 100%;
+        height: auto;
+    }
+    &__content {
+        display: none;
+        .banner__btn {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 12px;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            transition: 10s;
+            &--buy {
+                margin-right: 5px;
+                width: 112px;
+                background: $--primary;
+              }
+              &--info {
+                width: 112px;
+                background: $--secondary;
+              }
+        }
+    }
+    &__title {
+        @include heading(3.6rem, #111, 700);
+        margin-bottom: 10px;
+    }
+    &__text {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+        &::first-letter {
+            text-transform: uppercase;
+        }
+    }
+    @media (min-width: 600px) {
+        width: 100%;
+    }
+    @media (min-width: 768px) {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        &__content {
+            margin-right: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .banner__btn {
+                display: flex;
+            }
+        }
+    }
+    @media (min-width: 992px) {
+        &__content {
+            margin-right: 60px;
+        }
+    }
+}

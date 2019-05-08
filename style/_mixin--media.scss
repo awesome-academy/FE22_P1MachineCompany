@@ -1,0 +1,24 @@
+$res_320 : "only screen and (min-width: 320px)";
+$res_480 : "only screen and (min-width: 480px)";
+$res_768 : "only screen and (min-width: 768px)";
+$res_1024: "only screen and (min-width: 1024px)";
+@mixin responsive_320() {
+    @media #{$res_320} {
+        @content;
+    }
+}
+@mixin responsive_480() {
+    @media #{$res_480} {
+        @content;
+    }
+}
+@mixin responsive_768() {
+    @media #{$res_768} {
+        @content;
+    }
+}
+@mixin responsive_1024() {
+    @media #{$res_1024} {
+        @content;
+    }
+}
