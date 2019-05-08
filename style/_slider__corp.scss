@@ -1,0 +1,50 @@
+.slider__corp {
+    width: 100%;
+    background: $--bg--secondary;
+    .slider-corp {
+        position: relative;
+        height: 170px;
+        width: 90%;
+        max-width: 1140px;
+        margin: 0 auto;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        &__list {
+            //position: absolute;
+            display: flex;
+            //justify-content: space-around;
+            height: 100%;
+            width: 1140px;
+            min-width: 1140px;
+            &-item {
+                margin: auto;
+                align-self: center;
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+                animation: scroll .7s ease-in-out;
+            }
+        }
+        &__btn {
+            height: 50%;
+            font-size: 30px;
+            position: absolute;
+            border: none;
+            background-color: inherit;
+        }
+        #btn__left {
+            top: 25%;
+            left: 0;
+          }
+          #btn__right {
+            top: 25%;
+            right: 0;
+          }
+    }
+}
+@keyframes scroll {
+	0%   { opacity: .4;}
+	100% { opacity: 1;}
+}
