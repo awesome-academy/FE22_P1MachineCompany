@@ -1,0 +1,11 @@
+@mixin wrapper($bg,$mb) {
+    width: 100%;
+    background: $bg;
+    margin-bottom: $mb;
+}
+@mixin heading($size, $color,$f-weight) {
+    text-transform: uppercase;
+    font-size: $size;
+    color: $color;
+    font-weight: $f-weight;
+}

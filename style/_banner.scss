@@ -1,0 +1,40 @@
+.section-banner {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1140px;
+    .banner {
+      width: 100%;
+      height: auto;
+      &:first-child {
+        margin-bottom: 30px;
+    }
+      &--img {
+        width: 100%;
+        height: auto;
+        vertical-align: middle;
+        
+      }
+    }
+    @media (min-width: 768px) {
+      display: flex;
+      width: 100%;
+      .banner {
+        width: calc((100%-30px)/2);
+        height: auto;
+        &--img {
+            height: auto;
+        }
+      }
+      .banner:first-child {
+        margin-right: 30px;
+      }
+    }
+    @media (min-width: 1140px) {
+        width: 100%;
+      .banner {
+        width:555px;
+        height: 260px;
+        //height: auto;
+      }
+    }
+  }
