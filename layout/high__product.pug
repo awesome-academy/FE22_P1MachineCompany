@@ -1,0 +1,52 @@
+include _var__highProduct.pug
+include section__head.pug
+mixin productCard(img, price, title, star, rate)
+    .product__card
+        .card
+            img.card__img(src= img)
+            h3.card__price= price
+            p.card__title= title
+            .card__evaluate
+                -for(var i=0;i<star;i++){
+                    i.fas.fa-star.card__evaluate-star
+                -}
+                p.card__evaluate-rate (#{rate}) đánh giá
+            .card__btn
+                a(href="#").card__btn--buy mua ngay
+                a(href="#").card__btn--info xem chi tiết
+section.section-highproduct
+    +sectionHead("fas fa-th-large", "sản phẩm nổi bật")
+    .section__content
+        include aside.pug
+        .product-grid
+            +productCard("../imgs/high--product/high--product-1.png",
+                        "1.150.150 Đ",
+                        "máy khoan BLACK DECKER",
+                        4,
+                        12)
+            +productCard("../imgs/high--product/high--product-2.png",
+                        "1.150.150 Đ",
+                        "máy khoan BLACK DECKER",
+                        4,
+                        12)
+            +productCard("../imgs/high--product/high--product-3.png",
+                        "1.150.150 Đ",
+                        "máy khoan BLACK DECKER",
+                        4,
+                        12)
+            +productCard("../imgs/high--product/high--product-4.png",
+                        "1.150.150 Đ",
+                        "máy khoan BLACK DECKER",
+                        4,
+                        12)
+            +productCard("../imgs/high--product/high--product-5.png",
+                        "1.150.150 Đ",
+                        "máy khoan BLACK DECKER",
+                        4,
+                        12)
+            +productCard("../imgs/high--product/high--product-6.png",
+                        "1.150.150 Đ",
+                        "máy khoan BLACK DECKER",
+                        4,
+                        12)
+        

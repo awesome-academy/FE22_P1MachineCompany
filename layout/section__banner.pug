@@ -1,0 +1,7 @@
+mixin banner(...img)
+    .section-banner
+        each val in img
+            .banner
+                img.banner--img(src= val, alt="#")
++banner("../imgs/banner/banner-1.png",
+        "../imgs/banner/banner-2.png")
