@@ -1,0 +1,165 @@
+.section-newproduct {
+    margin: 0 auto;
+    max-width: 1140px;
+    margin-bottom: 30px;
+  .product__card {
+      font-family: "Roboto", sans-serif;
+      border: 1px solid $--border--slide;
+      box-shadow: 0px 0px 13px 0px rgba(245,245,245,1);
+      width: 100%;
+      height: 355px;
+      padding-top: 30px;
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__img {
+            width: 160px;
+          max-width: 100%;
+          height: auto;
+          margin: 0 auto 30px;
+          @media (min-width: 1140px) {
+              width: 260px;
+          }
+        }
+        &__price {
+          font-size: 14px;
+          text-transform: uppercase;
+          color: #ff0000;
+          margin: 0 auto 13px;
+        }
+        &__title {
+          font-size: 14px;
+          text-transform: uppercase;
+          font-weight: 700;
+          color: #202020;
+          margin: 0 auto 15px;
+        }
+        &__evaluate {
+          //display: flex;
+          font-size: 12px;
+          margin: 0 auto 20px;
+          &-star {
+            font-size: 12px;
+            color: $--primary;
+          }
+          &-rate {
+            color: $--border;
+            display: inline;
+          }
+        }
+        &__btn {
+          color: #fff;
+          text-transform: uppercase;
+          font-size: 12px;
+          text-align: center;
+          height: 40px;
+          line-height: 40px;
+          display: none;
+          transition: 10s;
+          &--buy {
+            margin-right: 5px;
+            width: 112px;
+            background: $--primary;
+          }
+          &--info {
+            width: 112px;
+            background: $--secondary;
+          }
+          // @media (min-width: 992px) {
+          //   display: none;
+          // }
+        }
+      }
+      @media (min-width: 320px) {
+        &:hover {
+          margin-bottom: 0;
+          height: 355px;
+          box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+          .card__btn {
+            display: block;
+          }  
+      }
+      }
+      @media (min-width: 992px) {
+        width: 260px;
+        height: 324px;
+        margin-bottom: 30px;
+        transition: .7s;
+        }
+    }
+    .product-grid {
+      height: auto;
+      @media (min-width: 320px) {
+        .product__card:first-child {
+          margin: 0 auto;
+        }
+        .product__card:not(:first-child) {
+          display: none;
+          .card {
+            margin: 0 auto;
+          }
+        }
+      }
+      @media (min-width: 600px) {
+        display: flex;
+        justify-content: space-around;
+        .product__card:nth-child(-n+ 2){
+          width: 262px;
+          display: block;
+          margin: 0;
+        }
+      }
+      @media (min-width: 600px) {
+        .product__card:nth-child(-n+ 2){
+          width: calc(90%/2);
+        }
+      }
+      @media (min-width: 992px) {
+        .product__card:nth-child(-n+3){
+          width: 262px;
+          display: block;
+        }
+      }
+      @media (min-width: 1140px) {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        //grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 30px;
+        .product__card:nth-child(-n+3){
+            width: 360px;
+            height: 438px;
+            margin-bottom: 30px;
+            transition: .7s;
+            display: block;
+            &:hover {
+                height: 100%;
+                margin-bottom: 0;
+            }
+          }
+        .product__card {
+          &:first-child {
+            margin-right: 0;
+          }
+          &:not(:first-child){
+            display: block;
+          }
+        }
+      }
+    }
+    @include responsive_320 {
+      width: 90%;
+      margin: 0 auto 30px;
+      //margin-bottom: 30px;
+    }
+    @media only screen and (min-width: 850px) {
+      margin: 0 auto 10px;
+      width: 100%;
+      max-width: 1140px;
+    }
+    @media only screen and (min-width: 1140px) {
+      margin: 0 auto 10px;
+      max-width: 1140px;
+    }
+  }

@@ -1,0 +1,159 @@
+.footer {
+    &-wrapper {
+        width: 100%;
+        background-color: $--bg--secondary;
+    }
+    width: 90%;
+    
+    margin: 0 auto;
+    &__top {
+        padding-bottom: 4.5rem;
+        border-bottom: 1px solid $--border--slide;
+        &__block {
+            margin-top: 4rem;
+            padding: .5rem 0;
+            &:first-child {
+                a:nth-child(2) {
+                    display: inline;
+                }
+            }
+        }
+        &__heading {
+            display: flex;
+            align-items: center;
+            .fas {
+                width: 1rem;
+                height: 1rem;
+                color: $--primary;
+                margin-right: 1rem;
+            }
+            .title{
+                @include heading(1.6rem, $--secondary, 700);
+            }
+            &:first-child {
+                padding-top: 3.5rem;
+            }
+        }
+        &__content {
+            display: flex;
+            flex-direction: column;
+            //margin-bottom: 1.5rem;
+            &--mt23 {
+                margin-top: 2.3rem;
+            }
+            .fab, .fas {
+                width: 1.4rem;
+                height: 1.4rem;
+                font-size: 1.4rem;
+                margin-right: .8rem;
+            }
+            a {
+                font-size: 1.3rem;
+                color: $--text;
+            }
+        }
+    }
+    &__bottom {
+        &__title {
+            font-size: 1.3rem;
+            color: $--text;
+            margin-bottom: 3rem;
+        }
+        &__pay {
+            padding-top: 3rem;
+            .pay {
+                &__grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 114px);
+                    grid-gap: 10px;
+                }
+            }
+           
+        }
+        &__ad {
+            padding-top: 3rem;
+            .advisory {
+                padding-bottom: 3rem;
+                display: flex;
+                align-items: center;
+                &__icon--radius {
+                    margin-right: 1rem;
+                    position: relative;
+                    width: 60px;
+                    height: 60px;
+                    border: 2px solid $--primary;
+                    border-radius: 999px;
+                    .fas {
+                        color: $--primary;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        margin: -1.05rem auto auto -1.05rem;
+                        font-size: 2.1rem;    
+                    }
+                    .rotate90 {
+                        transform: rotate(90deg);
+                    }
+                }
+                &__content {
+                    &-title {
+                        font-size: 1.3rem;
+                        color: $--text;
+                        margin-bottom:.9rem;
+                    }
+                    &-phone {
+                        @include heading(1.8rem, $--danger, 700);
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 650px) {
+        &__bottom {
+            padding-bottom: 30px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media (min-width: 768px) {
+        &__top {
+            width: 90%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            &__block:first-child {
+                grid-area: 1/1/2/3;
+            }
+        }
+        &__bottom {
+            width: 90%;
+            margin: 0 auto;
+            grid-column-gap: 20px;
+            .pay__grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    }
+    @media (min-width: 992px) {
+        &__bottom {
+            max-width: 1140px;
+            margin: 0 auto;
+            .advisory {
+                display: inline-flex;
+            }
+        }
+    }
+    @media (min-width: 1145px) {
+        width: 100%;
+        &__top {
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+            grid-template-columns: 351px 232px 237px 219px 1fr;
+            &__block:first-child {
+                grid-area: 1/1/2/2;
+            }
+        }
+    }
+}

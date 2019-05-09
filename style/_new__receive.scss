@@ -1,0 +1,161 @@
+.section-newreceive {
+    max-width: 1140px;
+    .newreceive-grid {
+        .card-width {
+        font-family: "Roboto", sans-serif;
+        border: 1px solid #e1e1e1;
+        box-shadow: 0px 0px 13px 0px rgba(245,245,245,1);
+        //width: 290px;
+        height: 453px;
+        transition: .7s;
+        &:hover {
+            box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.5);
+        }
+        .card {
+        width: 100%;
+        &__content {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            @media (min-width: 1140px) {
+            height: 180px;
+            width: 325px;
+            }
+        }
+        &__img {
+            width: 180px;
+            margin: 20px auto 25px;
+            &-img {
+            width: 100%;
+            height: auto;
+            }
+            
+        }
+        &__title {
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #202020;
+            margin:0 0 12px;
+        }
+        &__evaluate {
+            font-size: 12px;
+            margin:0 0 15px;
+            &-star {
+            font-size: 12px;
+            color: #f5bd10;
+            }
+            &-rate {
+            color: #898989;
+            display: inline;
+            }
+        }
+        &__text {
+            font-size: 13px;
+            color: #898989;
+            margin: 0 0 15px;
+        }
+        &__price {
+            font-size: 18px;
+            text-transform: uppercase;
+            color: #ff0000;
+            margin:0 0 10px;
+        }
+        &__btn {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 12px;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            display: block;
+            transition: .7s;
+            &--buy {
+            margin-right: 5px;
+            width: 112px;
+            background: #f5bd10;
+            }
+            &--info {
+            width: 112px;
+            background: #252525;
+            }
+            // @media (min-width: 1140px) {
+            //   display: none;
+            // }
+        }
+        }
+        }
+        @media (min-width: 320px) {
+            .card-width:not(:first-child) {
+                width: 100%;
+                display: none;
+            }
+        }
+        @media (min-width: 600px) {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            .card-width:first-child, 
+            .card-width:nth-child(2) {
+                width: calc(90%/2);
+                display: block;
+                margin-bottom: 30px;
+            }
+        }
+        @media (min-width: 768px) {
+            //flex-direction: column;
+            // .card-width {
+            //     width: 100%;
+            //     height: 231px;
+            // }
+            .card {
+                // display: flex;
+                // align-items: center;
+                &__img {
+                width: 180px;
+                margin: 9px;
+                }
+                &__title {
+                margin-top: 19px;
+                }
+                &__btn {
+                width: 229px;
+                }
+            }
+            // .card-width:first-child, 
+            // .card-width:nth-child(2) {
+            //     width: calc(90% /2);
+            // }
+        }
+        @media (min-width: 1140px) {
+            max-width: 1140px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 30px;
+            .card {
+                display: flex;
+                align-items: center;
+                &-width:nth-child(n) {
+                    width: 555px;
+                    height: 231px;
+                }
+            }
+            
+            .card__btn {
+                width: 229px;
+            }
+            .card-width:nth-child(n) {
+                display: block;
+            }
+        }
+    }
+  @media (min-width: 320px) {
+    width: 90%;
+    margin: 0 auto 30px;
+  }
+  @media (min-width: 600px) {
+    width: 100%;
+    margin: 0 auto 30px;
+  }
+}
