@@ -1,0 +1,16 @@
+mixin logForm(label, idInput, type, formcheck, missPass, btn)
+    .form-grid
+        -for(var i=0; i<label.length; i++){
+            .form-group
+                label.form-group__label(for= idInput[i])= label[i]
+                input.form-group__input(id= idInput[i], type= type[i])
+        -}
+    if formcheck
+        input#formcheck.form-checkbox--mt40(type="checkbox")
+        label#labelCheckbox.form-checkbox(for="formcheck")= formcheck
+    if missPass
+        a.miss-pass--link(href="#")= missPass
+    if btn
+        .form__btn
+            a.form__btn--dark(href="#")= btn[0]
+            a.form__btn--bright(href="#")= btn[1]

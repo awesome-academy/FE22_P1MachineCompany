@@ -1,0 +1,34 @@
+.header__navbar--wrapper {
+    margin-bottom: 0;
+}
+.breadcrumb {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid #ebebeb;
+    height: 50px;
+    margin-bottom: 20px;
+    &-item {
+        font-size: 1.4rem;
+        & > a {
+        color: $--secondary;
+        }
+        &:not(:last-child)::after {
+            font-size: x-small;
+            content: "►";
+            color: $--border;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+    .active {
+        & > a {
+        color: $--border;
+        }
+    }
+    @media (min-width: 768px) {
+        height: 76px;
+    }
+}

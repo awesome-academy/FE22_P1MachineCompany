@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        link(rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+            crossorigin="anonymous")
+        link(rel="stylesheet" href="./style/login.css")
+        title Machine Company
+    body
+        include layout/header.pug
+        include layout/breadcrumb.pug
+        include layout/_var__login.pug
+        include layout/_mixin__form.pug
+        section.forms
+            .login-form
+                h2.login-form__title thông tin đăng nhập :
+                +logForm(label, idInput, type, formCheck, missPass, btn)
+            .login-recommend
+                h2.login-recommend__title bạn chưa có tài khoản ?
+                p.login-recommend__text Đăng ký tài khoản để mua 
+                                        | hàng nhanh hơn. Theo dõi đơn đặt 
+                                        | hàng, vận chuyển. Cập nhật các tin
+                                        | tức sự kiện và các chương trình giảm
+                                        | giá của chúng tôi.
+                .login-recommend__btn
+                    a.login-recommend__btn--bright(href="#") đăng kí
+        include layout/footer.pug
+        script
+            include script/navScript.js
