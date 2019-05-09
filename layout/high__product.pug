@@ -1,5 +1,6 @@
 include _var__highProduct.pug
 include section__head.pug
+include aside.pug
 mixin productCard(img, price, title, star, rate)
     .product__card
         .card
@@ -17,7 +18,11 @@ mixin productCard(img, price, title, star, rate)
 section.section-highproduct
     +sectionHead("fas fa-th-large", "sản phẩm nổi bật")
     .section__content
-        include aside.pug
+        aside.aside
+            +asideList("fas fa-bars",
+                    "DANH MỤC SẢN PHẨM",
+                    "fas fa-th-large",
+                    productPortfolio)
         .product-grid
             +productCard("../imgs/high--product/high--product-1.png",
                         "1.150.150 Đ",

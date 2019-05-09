@@ -9,8 +9,21 @@ mixin asideList(iconTitle, title, icon, text)
             li.aside__list-item
                 i(class= icon)
                 a.aside__text(href="#")= val
-aside.aside
-    +asideList("fas fa-bars",
-                "DANH MỤC SẢN PHẨM",
-                "fas fa-th-large",
-                productPortfolio)
+mixin asideListProduct(iconTitle, title, img, name, price)
+    ul.aside__list
+        if title
+            li.aside__list-item.active
+                i(class= iconTitle)
+                a.aside__text= title
+        -for(var i=0; i<5; i++){
+            li.aside__list-item.height-120
+                img.aside__list-item--img(src= img[i])
+                .aside__list-item__content
+                    p.aside__list-item__content--name= name[i]
+                    p.aside__list-item__content--price= price[i]
+        -}
+//- aside.aside
+//-     +asideList("fas fa-bars",
+//-                 "DANH MỤC SẢN PHẨM",
+//-                 "fas fa-th-large",
+//-                 productPortfolio)

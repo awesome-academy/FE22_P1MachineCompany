@@ -1,0 +1,64 @@
+include _var__gridProduct.pug
+include _var__select.pug
+include _var__saleProduct.pug
+include section__head.pug
+include aside.pug
+mixin productCard(img, price, title, star, rate)
+    -for(var i=0; i<img.length; i++){
+        .product__card
+            .card
+                img.card__img(src= img[i])
+                h3.card__price= price[i]
+                p.card__title= title[i]
+                .card__evaluate
+                    -for(var j=0;j<star[i];j++){
+                        i.fas.fa-star.card__evaluate-star
+                    -}
+                    p.card__evaluate-rate (#{rate[i]}) đánh giá
+                .card__btn
+                    a(href="#").card__btn--buy mua ngay
+                    a(href="#").card__btn--info xem chi tiết
+    -}
+mixin select(title, list)
+    .product-grid__option
+        p.product-grid__option__title= title
+        select.product-grid__option__select
+            each val in list
+                option(value= val): a(href="#")= val
+section.section-gridproduct
+    +sectionHead("fas fa-th-large", "danh mục sản phẩm")
+    .section__content
+        .aside-list
+            aside.aside
+                +asideList("fas fa-bars",
+                        "DANH MỤC SẢN PHẨM",
+                        "fas fa-th-large",
+                        productPortfolio)
+            aside.aside
+                +asideList("fas fa-dollar-sign",
+                        "TÌM THEO MỨC GIÁ",
+                        "fas fa-th-large",
+                        priceList)
+            aside.aside
+                +asideList("fas fa-paint-brush",
+                        "TÌM THEO MÀU SẮC",
+                        "fas fa-square-full",
+                        colorList)
+            aside.aside
+                +asideListProduct("fas fa-gift",
+                                  "SẢN PHẨM KHUYẾN MẠI",
+                                  imgsSale,
+                                  names,
+                                  prices)
+        .product-grid
+            .product-grid__head
+                +select("Sắp xếp theo:", select)
+                +select("Show:", show)
+                .product-grid__list-type
+                    i.fas.fa-bars.product-grid__list-type--item
+                    i.fas.fa-th.product-grid__list-type--item
+            .product-grid__content
+                +productCard(imgs, prices, titles, stars, rates)
+            .product-grid__page
+                each value in page
+                    a.product-grid__page--link(href="#")= value
