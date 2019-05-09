@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -446,203 +445,109 @@ button {
   }
 }
 
-.header__navbar--wrapper {
-  margin-bottom: 0;
+.section-error {
+  width: 100%;
 }
 
-.breadcrumb {
-  margin-top: 0;
+.section-error .error {
+  width: 90%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.section-error .error-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 90%;
-  margin: 0 auto;
-  border-bottom: 1px solid #ebebeb;
-  height: 50px;
-  margin-bottom: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.breadcrumb-item {
-  font-size: 1.4rem;
-}
-
-.breadcrumb-item > a {
-  color: #252525;
-}
-
-.breadcrumb-item:not(:last-child)::after {
-  font-size: x-small;
-  content: "►";
-  color: #898989;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.breadcrumb .active > a {
-  color: #898989;
-}
-
-@media (min-width: 768px) {
-  .breadcrumb {
-    height: 76px;
-  }
-}
-
-.login-form {
-  width: 90%;
-  max-width: 523px;
-  margin: 0 auto;
-  margin-bottom: 40px;
-}
-
-.login-form__title {
+.section-error .error-content__title {
   text-transform: uppercase;
-  font-size: 1.4rem;
-  color: #252525;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.login-form .form-group__label {
-  display: block;
-  font-size: 14px;
-  color: #252525;
-  margin-bottom: 20px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.login-form .form-group__label::after {
-  content: "*";
-  color: #ff0000;
-}
-
-.login-form .form-group__input {
-  width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding-left: 30px;
-  max-width: 523px;
-  height: 48px;
-  margin-bottom: 20px;
-  border: 1px solid #e1e1e1;
-  border-radius: 2px;
-}
-
-.login-form .form-group__input:focus {
-  outline-color: #f5bd10;
-}
-
-.login-form .form-checkbox {
-  font-size: 14px;
-  color: #898989;
-  font-style: italic;
-}
-
-.login-form .form-checkbox--mt40 {
-  margin-bottom: 40px;
-  margin-right: 5px;
-}
-
-.login-form .miss-pass--link {
-  font-size: 14px;
+  font-size: 5rem;
   color: #f5bd10;
-  display: inline-block;
-  font-style: italic;
-  text-decoration: underline;
-  float: right;
+  font-weight: 700;
 }
 
-.login-form .form__btn {
-  left: 0;
+.section-error .error-content__text {
+  font-size: 1.8rem;
+  line-height: 1.333;
+  color: #252525;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.section-error .error-content__btn {
+  color: #fff;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
   height: 40px;
   line-height: 40px;
 }
 
-.login-form .form__btn--dark {
+.section-error .error-content__btn--dark {
   background-color: #252525;
   width: 112px;
   margin-right: 5px;
   float: left;
 }
 
-.login-form .form__btn--bright {
-  background-color: #f5bd10;
-  width: 112px;
-  float: left;
-}
-
-@media only screen and (min-width: 768px) {
-  .login-form {
-    width: 100%;
-    margin-bottom: 0;
-  }
-}
-
-.login-recommend {
+.section-error .error-img {
   width: 90%;
-  max-width: 523px;
   margin: 0 auto;
-  margin-bottom: 40px;
+  max-width: 455px;
 }
 
-.login-recommend__title {
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  color: #252525;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.login-recommend__text {
-  font-family: Arial, sans-serif;
-  font-size: 1.4rem;
-  color: #898989;
-  margin-bottom: 3rem;
-  line-height: 1.714;
-}
-
-.login-recommend__btn {
-  left: 0;
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  text-align: center;
-  height: 4rem;
-  line-height: 4rem;
-}
-
-.login-recommend__btn--bright {
-  background-color: #f5bd10;
-  width: 11.2rem;
-  float: left;
+.section-error .error-img--img {
+  width: 100%;
+  height: auto;
 }
 
 @media only screen and (min-width: 768px) {
-  .login-recommend {
-    width: 100%;
-    margin-bottom: 0;
+  .section-error .error {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .section-error .error-content__title {
+    font-size: 6rem;
+  }
+  .section-error .error-content-img {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 
-@media only screen and (min-width: 768px) {
-  .forms {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 30px;
-    width: 90%;
-    max-width: 1140px;
-    margin: 0 auto;
-    margin-bottom: 100px;
+@media only screen and (min-width: 992px) {
+  .section-error .error-content__title {
+    font-size: 7rem;
+  }
+  .section-error .error-content-img {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
+@media only screen and (min-width: 1140px) {
+  .section-error .error-content__title {
+    font-size: 10rem;
+  }
+  .section-error .error-content-img {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 
@@ -865,4 +770,4 @@ button {
 * {
   font-family: 'Roboto', sans-serif;
 }
-/*# sourceMappingURL=login.css.map */
+/*# sourceMappingURL=404.css.map */
