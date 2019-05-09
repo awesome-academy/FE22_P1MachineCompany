@@ -37,8 +37,10 @@
     .form-checkbox {
       font-size: 14px;
       color: $--border;
+      font-style: italic;
       &--mt40 {
         margin-bottom: 40px;
+        margin-right: 5px;
       }
     }
     .miss-pass--link {

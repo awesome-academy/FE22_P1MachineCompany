@@ -631,17 +631,51 @@ button {
   }
 }
 
-@media only screen and (min-width: 768px) {
-  .forms {
+@media (min-width: 768px) {
+  .signin {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 30px;
     width: 90%;
-    max-width: 1140px;
     margin: 0 auto;
     margin-bottom: 100px;
+  }
+  .signin .login-form {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .signin {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+  .signin .form-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+  }
+  .signin .login-form {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .signin .login-form {
+    margin: 0 auto;
+  }
+  .signin .login-form .form-group:nth-child(2n) {
+    -ms-grid-column-align: right;
+        justify-self: right;
+    width: 523px;
   }
 }
 
@@ -864,4 +898,4 @@ button {
 * {
   font-family: 'Roboto', sans-serif;
 }
-/*# sourceMappingURL=login.css.map */
+/*# sourceMappingURL=signin.css.map */
