@@ -1,6 +1,8 @@
-nav(arial-label="breadcrumb")
-    ol.breadcrumb
-        li.breadcrumb-item.active
-            a(href="#") trang chủ
-        li.breadcrumb-item
-            a(href="#") đăng nhập
+mixin breadcrumb(...list)
+    nav(arial-label="breadcrumb")
+        ol.breadcrumb
+            li.breadcrumb-item.active
+                a(href="#") trang chủ
+            each val in list
+                li.breadcrumb-item
+                    a(href="#")= val

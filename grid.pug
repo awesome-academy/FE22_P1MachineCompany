@@ -8,21 +8,15 @@ html(lang="en")
             href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
             integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
             crossorigin="anonymous")
-        link(rel="stylesheet" href="./style/signin.css")
+        link(rel="stylesheet" href="./style/grid.css")
         title Machine Company
     body
         include layout/header.pug
         include layout/breadcrumb.pug
-        +breadcrumb("đăng kí")
-        include layout/_var__signin.pug
-        include layout/_mixin__form.pug
-        section.signin
-            .login-form
-                h2.login-form__title thông tin cá nhân :
-                +logForm(labelInfoUser, idInfoUser, typeInfoUser, formCheck)
-            .login-form
-                h2.login-form__title thông tin đăng nhập :
-                +logForm(labelInfoLogin, idInfoLogin, typeInfoLogin, "", null, btn)
+        +breadcrumb("danh mục sản phẩm")
+        include layout/grid__product.pug
         include layout/footer.pug
         script
             include script/navScript.js
+            include script/slide.js
+            include script/slider.js

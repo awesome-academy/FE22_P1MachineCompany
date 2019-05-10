@@ -47,12 +47,29 @@
         &:hover > *{
           color: $--primary;
         }
+        &__content {
+          font-size: 1.4rem;
+          text-transform: uppercase;
+          font-weight: 700;
+          line-height: 1.286;
+          &--name {
+            color: #202020;
+            margin-bottom: 10px;
+          }
+          &--price {
+            color: $--danger;
+          }
+        }
+        &--img {
+          max-width: 100%;
+          height: auto;
+        }
       }
       @include responsive_320 {
         height: 5rem;
         overflow: hidden;
         &:hover {
-          height: 60rem;
+          height: fit-content;
           overflow: initial;
         }
         // &-item:first-child {
@@ -68,8 +85,16 @@
         //   display: inline-flex;
         // }
         &-item {
-          height: calc(100%/12);
+          //height: calc(100%/12);
+          height: 60px;
         }
+      }
+    }
+    .height-120 {
+      height: 120px;
+      &:hover {
+        background: #fff;
+        box-shadow: 0px 5px 10px 0px rgba(161,161,161,.8);
       }
     }
     @include responsive_320 {
