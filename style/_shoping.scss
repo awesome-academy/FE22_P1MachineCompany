@@ -1,0 +1,96 @@
+$thWidth: 8.5%, 17%, 25.7%, 15.64%, 9.9%, 15.64%, 7.62%;
+th,td {
+    border: 1px solid $--border--slide;
+    vertical-align: middle;  
+}
+.shoping {
+    &-wrapper {
+        height: auto;
+        width: 90%;
+        max-width: 1140px;
+        margin: 0 auto 140px;
+        height: fit-content;
+    }
+    border: 1px solid $--border--slide;
+    vertical-align: middle;
+    width: 100%;
+    @include heading(1rem, $--secondary, 700);
+    text-align: center;
+    border-collapse: collapse;
+    margin-bottom: 3rem;
+    &__th {
+        border: 1px solid $--border--slide;
+        vertical-align: middle;
+        @for $i from 1 through length($thWidth){
+            &:nth-child(#{$i}){
+                width: nth($thWidth, $i);
+            }
+        }
+    }
+    &__heading {
+        height: 6.5rem;
+        vertical-align: center;
+    }
+    &__row {
+        height: 19.4rem;
+        &-input {
+            text-align: center;
+            width: 3.8rem;
+            height: 3.8rem;
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button{
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+        &--icon {
+            color: $--danger;
+        }
+    }
+    @media (min-width: 768px) {
+        font-size: 1.4rem;
+    }
+}
+.payment {
+    width: 100%;
+    max-width: 485px;
+    @include heading(1.4rem, $--secondary, 700);
+    &-table{
+        width: 100%;
+        border: 1px solid $--border--slide;
+        vertical-align: middle;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        &__row {
+            height: 58px;
+            &--danger {
+                color: $--danger;
+            }
+            td {
+                text-align: right;
+                padding-right: 30px;
+            }
+        }
+    }
+    &-btn {
+        @include heading(1.2rem, #fff, 700);
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        float: right;
+        &--dark {
+            width: 196px;
+            background: $--primary;
+            margin-right: 1rem;
+        }
+        &--bright {
+            width: 148px;
+            background: $--secondary;
+        }
+    }
+    @media (min-width: 425px) {
+        &--right {
+            margin-left: auto;
+        }
+    }
+}

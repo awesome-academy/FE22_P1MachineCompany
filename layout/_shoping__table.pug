@@ -1,0 +1,43 @@
+include _var__shoping.pug
+.shoping-wrapper
+    table.shoping
+        thead
+            tr.shoping__heading
+                th.shoping__th.shoping__num stt
+                th.shoping__th.shoping__product sản phẩm 
+                th.shoping__th.shoping__info thông tin
+                th.shoping__th.shoping__price đơn giá
+                th.shoping__th.shoping__amount số lượng
+                th.shoping__th.shoping__sum thành tiền
+                th.shoping__th.shoping__del xóa
+        tbody
+            -for(var i=0; i< num.length; i++){
+                tr.shoping__row
+                    th= num[i]
+                    th
+                        img(src= product[i])
+                    th= info[i]
+                    th= price[i]
+                    th
+                        input.shoping__row-input(type="number" value=amount[i])
+                    th= sum[i]
+                    th
+                        a(href="#"): i.shoping__row--icon.fas.fa-times
+            -}
+    .payment.payment--right
+        table.payment-table
+            tr.payment-table__row
+                td tổng tiền:
+                td  6.850.000 Đ
+            tr.payment-table__row
+                td thuế(vat):
+                td  6850.000 Đ
+            tr.payment-table__row
+                td thanh toán:
+                td.payment-table__row--danger 7.520.000 Đ
+        .payment-btn
+            a.payment-btn--dark(href="#") tiếp tục mua hàng
+            a.payment-btn--bright(href="#") thanh toán
+
+        
+        
