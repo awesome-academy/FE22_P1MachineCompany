@@ -1,0 +1,13 @@
+include _var__select.pug
+mixin select(title, list)
+    .product-grid__option
+        p.product-grid__option__title= title
+        select.product-grid__option__select
+            each val in list
+                option(value= val): a(href="#")= val
+mixin selectList(title, list)
+    .newreceive-grid__option
+        p.newreceive-grid__option__title= title
+        select.newreceive-grid__option__select
+            each val in list
+                option(value= val): a(href="#")= val

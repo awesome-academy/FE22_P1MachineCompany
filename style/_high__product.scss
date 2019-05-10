@@ -18,20 +18,14 @@
         margin: 0 auto 30px;
       }
       &__price {
-        font-size: 14px;
-        text-transform: uppercase;
-        color: #ff0000;
+        @include heading(1.4rem, #ff0000,700);
         margin: 0 auto 13px;
       }
       &__title {
-        font-size: 14px;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: #202020;
+        @include heading(1.4rem, #202020,700);
         margin: 0 auto 15px;
       }
       &__evaluate {
-        //display: flex;
         font-size: 12px;
         margin: 0 auto 20px;
         &-star {
@@ -61,9 +55,6 @@
           width: 112px;
           background: $--secondary;
         }
-        // @media (min-width: 992px) {
-        //   display: none;
-        // }
       }
     }
     @media (min-width: 320px) {
