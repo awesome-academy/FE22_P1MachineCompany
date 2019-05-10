@@ -1,7 +1,7 @@
 .section-newproduct {
     margin: 0 auto;
     max-width: 1140px;
-    margin-bottom: 30px;
+    //margin-bottom: 30px;
   .product__card {
       font-family: "Roboto", sans-serif;
       border: 1px solid $--border--slide;
@@ -23,20 +23,14 @@
           }
         }
         &__price {
-          font-size: 14px;
-          text-transform: uppercase;
-          color: #ff0000;
+          @include heading(1.4rem, #ff0000,700);
           margin: 0 auto 13px;
         }
         &__title {
-          font-size: 14px;
-          text-transform: uppercase;
-          font-weight: 700;
-          color: #202020;
+          @include heading(1.4rem, #202020,700);
           margin: 0 auto 15px;
         }
         &__evaluate {
-          //display: flex;
           font-size: 12px;
           margin: 0 auto 20px;
           &-star {
@@ -66,9 +60,6 @@
             width: 112px;
             background: $--secondary;
           }
-          // @media (min-width: 992px) {
-          //   display: none;
-          // }
         }
       }
       @media (min-width: 320px) {
@@ -125,7 +116,6 @@
         width: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        //grid-template-rows: repeat(2, 1fr);
         grid-column-gap: 30px;
         .product__card:nth-child(-n+3){
             width: 360px;
@@ -134,8 +124,10 @@
             transition: .7s;
             display: block;
             &:hover {
-                height: 100%;
-                margin-bottom: 0;
+              margin-bottom: 0;
+              height: 468px;
+                //height: 100%;
+                
             }
           }
         .product__card {
@@ -151,7 +143,6 @@
     @include responsive_320 {
       width: 90%;
       margin: 0 auto 30px;
-      //margin-bottom: 30px;
     }
     @media only screen and (min-width: 850px) {
       margin: 0 auto 10px;

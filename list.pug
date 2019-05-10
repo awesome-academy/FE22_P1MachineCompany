@@ -1,0 +1,68 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        link(rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+            crossorigin="anonymous")
+        link(rel="stylesheet" href="./style/list.css")
+        title Machine Company
+    body
+        include layout/header.pug
+        include layout/breadcrumb.pug
+        include layout/section__head.pug
+        include layout/aside.pug
+        +breadcrumb("danh mục sản phẩm")
+        include layout/new__receive.pug
+        include layout/_var__listProduct.pug
+        include layout/_select.pug
+        section.section-listproduct
+            +sectionHead("fas fa-th-large", "danh mục sản phẩm")
+            .section__content
+                .aside-list
+                    aside.aside
+                        +asideList("fas fa-bars",
+                                "DANH MỤC SẢN PHẨM",
+                                "fas fa-th-large",
+                                productPortfolio)
+                    aside.aside
+                        +asideList("fas fa-dollar-sign",
+                                "TÌM THEO MỨC GIÁ",
+                                "fas fa-th-large",
+                                priceList)
+                    aside.aside
+                        +asideList("fas fa-paint-brush",
+                                "TÌM THEO MÀU SẮC",
+                                "fas fa-square-full",
+                                colorList)
+                    aside.aside
+                        +asideListProduct("fas fa-gift",
+                                        "SẢN PHẨM KHUYẾN MẠI",
+                                        imgsSale,
+                                        names,
+                                        prices)
+                .newreceive-grid
+                    .newreceive-grid__head
+                        +selectList("Sắp xếp theo:", select)
+                        +selectList("Show:", show)
+                        .newreceive-grid__list-type
+                            i.fas.fa-bars.newreceive-grid__list-type--item
+                            i.fas.fa-th.newreceive-grid__list-type--item
+                    .newreceive-grid__content
+                        +cardWidth(imgsListProduct,
+                                   nameListProduct,
+                                   starsListProduct,
+                                   rateListProduct,
+                                   textListProduct,
+                                   priceListProduct)
+                    .newreceive-grid__page
+                        each value in page
+                            a.newreceive-grid__page--link(href="#")= value
+        include layout/footer.pug
+        script
+            include script/navScript.js
+            include script/slide.js
+            include script/slider.js

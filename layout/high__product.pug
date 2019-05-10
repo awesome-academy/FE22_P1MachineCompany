@@ -1,57 +1,20 @@
 include _var__highProduct.pug
-include section__head.pug
-include aside.pug
-mixin productCard(img, price, title, star, rate)
-    .product__card
-        .card
-            img.card__img(src= img)
-            h3.card__price= price
-            p.card__title= title
-            .card__evaluate
-                -for(var i=0;i<star;i++){
-                    i.fas.fa-star.card__evaluate-star
-                -}
-                p.card__evaluate-rate (#{rate}) đánh giá
-            .card__btn
-                a(href="#").card__btn--buy mua ngay
-                a(href="#").card__btn--info xem chi tiết
-section.section-highproduct
-    +sectionHead("fas fa-th-large", "sản phẩm nổi bật")
-    .section__content
-        aside.aside
-            +asideList("fas fa-bars",
-                    "DANH MỤC SẢN PHẨM",
-                    "fas fa-th-large",
-                    productPortfolio)
-        .product-grid
-            +productCard("../imgs/high--product/high--product-1.png",
-                        "1.150.150 Đ",
-                        "máy khoan BLACK DECKER",
-                        4,
-                        12)
-            +productCard("../imgs/high--product/high--product-2.png",
-                        "1.150.150 Đ",
-                        "máy khoan BLACK DECKER",
-                        4,
-                        12)
-            +productCard("../imgs/high--product/high--product-3.png",
-                        "1.150.150 Đ",
-                        "máy khoan BLACK DECKER",
-                        4,
-                        12)
-            +productCard("../imgs/high--product/high--product-4.png",
-                        "1.150.150 Đ",
-                        "máy khoan BLACK DECKER",
-                        4,
-                        12)
-            +productCard("../imgs/high--product/high--product-5.png",
-                        "1.150.150 Đ",
-                        "máy khoan BLACK DECKER",
-                        4,
-                        12)
-            +productCard("../imgs/high--product/high--product-6.png",
-                        "1.150.150 Đ",
-                        "máy khoan BLACK DECKER",
-                        4,
-                        12)
-        
+include _var__newProduct.pug
+include _var__hotsale.pug
+include _var__category.pug
+mixin productCard(img, price, title, star, rate, area)
+    -for(var i=0; i<img.length; i++){
+        .product__card(class=(area ? area[i] : ""))
+            .card
+                img.card__img(src= img[i])
+                h3.card__price= price[i]
+                p.card__title= title[i]
+                .card__evaluate
+                    -for(var j=0;j<star[i];j++){
+                        i.fas.fa-star.card__evaluate-star
+                    -}
+                    p.card__evaluate-rate (#{rate[i]}) đánh giá
+                .card__btn
+                    a(href="#").card__btn--buy mua ngay
+                    a(href="#").card__btn--info xem chi tiết
+    -}

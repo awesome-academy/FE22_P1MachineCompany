@@ -1,4 +1,5 @@
 include _var__aside.pug
+include _var__saleProduct.pug
 mixin asideList(iconTitle, title, icon, text)
     ul.aside__list#aside__list
         if title
@@ -22,8 +23,3 @@ mixin asideListProduct(iconTitle, title, img, name, price)
                     p.aside__list-item__content--name= name[i]
                     p.aside__list-item__content--price= price[i]
         -}
-//- aside.aside
-//-     +asideList("fas fa-bars",
-//-                 "DANH MỤC SẢN PHẨM",
-//-                 "fas fa-th-large",
-//-                 productPortfolio)

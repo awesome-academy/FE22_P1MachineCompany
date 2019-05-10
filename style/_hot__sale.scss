@@ -1,5 +1,5 @@
 .section-sale {
-    margin: 0 auto 30px;
+    margin: 0 auto 10px;
     max-width: 1140px;
   .product__card {
       font-family: "Roboto", sans-serif;
@@ -12,28 +12,20 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        box-sizing: border-box;
         &__img {
-            width: 160px;
-          max-width: 100%;
+          width: 160px;
           height: auto;
           margin: 0 auto 30px;
         }
         &__price {
-          font-size: 14px;
-          text-transform: uppercase;
-          color: #ff0000;
+          @include heading(1.4rem, #ff0000,700);
           margin: 0 auto 13px;
         }
         &__title {
-          font-size: 14px;
-          text-transform: uppercase;
-          font-weight: 700;
-          color: #202020;
+          @include heading(1.4rem, #202020,700);
           margin: 0 auto 15px;
         }
         &__evaluate {
-          //display: flex;
           font-size: 12px;
           margin: 0 auto 20px;
           &-star {
@@ -67,9 +59,8 @@
       }
       @media (min-width: 320px) {
         &:hover {
-          
-          height: 355px;
           margin-bottom: 0;
+          height: 354px;
           box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
           .card__btn {
             display: block;
@@ -140,6 +131,7 @@
             grid-area: 1 / 2 / 3 / 3;
             height: 678px;
             &:hover {
+              margin-bottom: 0;
               height: 708px;
             }
             .card__img {
@@ -160,9 +152,10 @@
     }
     @include responsive_320 {
       width: 90%;
+      margin: 0 auto;
     }
     @media only screen and (min-width: 849px) {
-      margin: 0 auto 30px;
+      margin: 0 auto;
       width: 100%;
       max-width: 1140px;
     }
