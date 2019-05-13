@@ -1,0 +1,66 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        link(rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+            crossorigin="anonymous")
+        link(rel="stylesheet" href="./style/blog-detail.css")
+        title Machine Company
+    body
+        include layout/header.pug
+        include layout/breadcrumb.pug
+        include layout/section__head.pug
+        include layout/aside.pug
+        +breadcrumb("tin tức")
+        include layout/_var__blog-detail.pug
+        include layout/_var__comment.pug
+        include layout/_var__select.pug
+        include layout/_var__writeComment.pug
+        include layout/_blog-detail.pug
+        include layout/_comment.pug
+        include layout/_mixin__form.pug
+        section.section-blog
+            .aside-list
+                aside.aside
+                    +asideList("fas fa-bars",
+                            "DANH MỤC SẢN PHẨM",
+                            "fas fa-th-large",
+                            productPortfolio)
+                aside.aside
+                    +asideListNone("fas fa-th-large",
+                            "DANH MỤC TIN TỨC",
+                            "fas fa-th-large",
+                            news)
+                aside.aside
+                    +asideGrid("fas fa-th-large",
+                            "THƯ VIỆN HÌNH ẢNH",
+                            galery)
+                aside.aside
+                    +asideTags("fas fa-th-large",
+                            "THẺ TAGS",
+                            tags)
+            .section-blog__content
+                section.section-blog__article
+                        +blogDetail(imgs,
+                            title,
+                            time,
+                            author,
+                            comment,
+                            text)
+                section.section-blog__comment
+                    p.section-blog__comment--title bình luận:
+                    +comment(commentImg,
+                             commentName,
+                             commentTime,
+                             commentText)
+                section.section-write
+                    .login-form 
+                        h2.login-form__title viết bình luận của bạn:
+                        +logForm(label, idInput, type, "", null, idInput)
+        include layout/footer.pug
+        script
+            include script/navScript.js

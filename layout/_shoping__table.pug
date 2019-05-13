@@ -3,13 +3,8 @@ include _var__shoping.pug
     table.shoping
         thead
             tr.shoping__heading
-                th.shoping__th.shoping__num stt
-                th.shoping__th.shoping__product sản phẩm 
-                th.shoping__th.shoping__info thông tin
-                th.shoping__th.shoping__price đơn giá
-                th.shoping__th.shoping__amount số lượng
-                th.shoping__th.shoping__sum thành tiền
-                th.shoping__th.shoping__del xóa
+                each val in column
+                    th.shoping__th= val
         tbody
             -for(var i=0; i< num.length; i++){
                 tr.shoping__row
@@ -38,6 +33,3 @@ include _var__shoping.pug
         .payment-btn
             a.payment-btn--dark(href="#") tiếp tục mua hàng
             a.payment-btn--bright(href="#") thanh toán
-
-        
-        
