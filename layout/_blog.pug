@@ -1,0 +1,18 @@
+mixin blog(img, title, time, author, comment, text)
+    -for(var i =0; i<img.length; i++){
+        article.post
+            img.post__img(src= img[i], alt="")
+            .post__title= title[i]
+            .post__meta
+                p.post__meta-time= time[i]
+                .post__meta-author
+                    i.post__meta-author--icon.fas.fa-user
+                    p.post__meta-author--inline Đăng bởi  
+                        span.post__meta-author--highlight= author[i]
+                .post__meta-comment
+                    i.post__meta-comment--icon.fas.fa-comments
+                    p.post__meta-comment--inline= comment[i]   
+                        span  Bình luận
+            .post__text
+                p= text[i]
+    -}

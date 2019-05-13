@@ -6,6 +6,7 @@
       list-style-type: none;
       border: 1px solid #a1a1a1;
       padding-left: 0;
+      font-size: 1.3rem;
       box-shadow: 0px 5px 10px 0px rgba(161,161,161,.7);
       &-item {
         width: 100%;
@@ -65,6 +66,31 @@
           height: auto;
         }
       }
+      &--bordernone {
+        box-shadow: none;
+        border: none;
+        .active {
+          background-color: #fff;
+          border-color: $--primary;
+          .aside__text {
+            color: #a1a1a1;
+          }
+        }
+        .fas {
+          margin-left: 0;
+        }
+        .aside__list-item--none {
+          border: none;
+          &::after{
+            display: none;
+          }
+        }
+        .aside__list-item--nosign {
+          &::after{
+            display: none;
+          }
+        }
+      }
       @include responsive_320 {
         height: 5rem;
         overflow: hidden;
@@ -97,6 +123,32 @@
       &:hover {
         background: #fff;
         box-shadow: 0px 5px 10px 0px rgba(161,161,161,.8);
+      }
+    }
+    &__galery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 5px;
+    }
+    &__tag {
+      &-item {
+        font-size: 1.3rem;
+        color: $--border;
+        font-style: italic;
+        height: 30px;
+        border: 1px solid $--border;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        padding: 0 15px;
+        transition: .7s;
+        line-height: 2;
+        &::first-letter{
+          text-transform: initial;
+        }
+        &:hover {
+          background-color: #202020;
+          color: #fff;
+        }
       }
     }
     @include responsive_320 {
