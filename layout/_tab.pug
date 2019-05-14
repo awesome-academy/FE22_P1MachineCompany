@@ -1,0 +1,9 @@
+mixin tab(idBtn, idTab, titleBtn, text)
+    .tab__btn
+        -for(var i=0; i<idButton.length; i++){
+            button.tab__btn--link(onclick=`opentag(event, '${idTab[i]}')` id= idBtn[i])= titleBtn[i].toUpperCase()
+        -}
+    each val in idTab
+        .tab__content(id=val)
+            each value in text
+                p.tab__content--text= value

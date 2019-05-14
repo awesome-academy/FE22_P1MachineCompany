@@ -1,4 +1,479 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"><link rel="stylesheet" href="./style/style.css"><title>Machine Company</title></head><body><header class="header"><div class="header__navigation--wrapper"><div class="header__navigation"><a class="header__navigation--social" href="#"><i class="fab fa-facebook-f"></i></a><a class="header__navigation--social" href="#"><i class="fab fa-google-plus-g"></i></a><a class="header__navigation--social" href="#"><i class="fab fa-instagram"></i></a><a class="header__navigation--social" href="#"><i class="fab fa-twitter"></i></a><div class="header__navigation__form login"><div class="login__btn"><a href="#" title="Đăng kí">đăng kí</a></div><div class="login__btn"><a href="#" title="Đăng nhập">đăng nhập</a></div></div></div></div><div class="header__center--wrapper"><div class="header__center"><img class="header__center-logo" src="../imgs/Logo.png"><div class="header__center-middle"><div class="header__center-contact"><h2 class="header__center-heading">hotline :</h2><p class="header__center-phone">(04) 9500 9650 - (04) 9500 8850 </p></div><div class="header__center-contact"><h2 class="header__center-heading">đặt hàng nhanh :</h2><p class="header__center-phone">(04) 9500 9650 - (04) 9500 8850 </p></div></div><div class="header__center-form header__search-form"><input class="header__search-form__input" placeholder="Tìm kiếm..."><i class="fas fa-search header__search-form__btn"></i></div></div></div><div class="header__navbar--wrapper"><div class="header__navbar"><nav class="header__navbar__menu" id="collapse"><a class="header__navbar__menu-item" onclick="myFunc()"><i class="fa fa-bars"></i></a><a class="header__navbar__menu-item" href="#">trang chủ</a><a class="header__navbar__menu-item" href="#">giới thiệu</a><a class="header__navbar__menu-item" href="#">sản phẩm</a><a class="header__navbar__menu-item" href="#">tin khuyến mại</a><a class="header__navbar__menu-item" href="#">dịch vụ</a><a class="header__navbar__menu-item" href="#">liên hệ</a></nav><i class="header__navbar__cart fas fa-shopping-basket"></i></div></div></header><div class="header__slider"><div class="slider" id="slider"><input id="i1" type="radio" name="images" checked><input id="i2" type="radio" name="images"><input id="i3" type="radio" name="images"><div class="slider__img" id="one"><img class="slider__img-move" src="../imgs/slider.png" alt="" onclick="changeIt(1)"></div><div class="slider__img" id="two"><img class="slider__img-move" src="../imgs/slider.png" alt="" onclick="changeIt(2)"></div><div class="slider__img" id="three"><img class="slider__img-move" src="../imgs/slider.png" alt="" onclick="changeIt(3)"></div><div class="slider__nav" id="slider__nav"><label class="slider__nav__dots" id="dot1" for="i1"></label><label class="slider__nav__dots" id="dot2" for="i2"></label><label class="slider__nav__dots" id="dot3" for="i3"></label></div></div><div class="slide-menu"><ul class="menu__list"><li class="menu__list-item list-item"><i class="list-item__icon fas fa-plane list-item__icon--rotate"></i><div><h1 class="list-item__title">miễn phí vận chuyển</h1><p class="list-item__parap">Chúng tôi vận chuyển miễn phí với các  đơn hàng trị giá trên 1.000.000Đ</p></div></li><li class="menu__list-item list-item"><i class="list-item__icon fas fa-sync-alt"></i><div><h1 class="list-item__title">chính sách đổi trả</h1><p class="list-item__parap">Nếu phát hiện lỗi của nhà sản xuất,  chúng tôi sẽ đổi mới sản phẩm trong 7 ngày đầu tiên</p></div></li><li class="menu__list-item list-item"><i class="list-item__icon fas fa-gift"></i><div><h1 class="list-item__title">khuyển mại hàng tuần</h1><p class="list-item__parap">Mỗi thứ 7 hàng tuần đều có chương  trình giảmgiá và khuyến mại lớn</p></div></li><li class="menu__list-item list-item"><i class="list-item__icon fas fa-thumbs-up"></i><div><h1 class="list-item__title">cam kết hàng chính hãng</h1><p class="list-item__parap">Chúng tôi cam kết bán hàng chính hãng  100% với tất cả các loại sản phẩm</p></div></li></ul></div></div><section class="section-highproduct"><div class="section__heading"><div class="section__heading__left"><i class="fas fa-th-large"></i><p class="heading__title">sản phẩm nổi bật</p></div><div class="section__heading__right"><i class="fas fa-caret-left border-89"></i><i class="fas fa-caret-right border-89"></i></div></div><div class="section__content"><aside class="aside"><ul class="aside__list" id="aside__list"><li class="aside__list-item active"><i class="fas fa-bars"></i><a class="aside__text">DANH MỤC SẢN PHẨM</a></li><li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy khoan, cắt CNC</a></li><li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy in phun cỡ lớn</a></li><li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy quét canon 3D</a></li><li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy hàn điện Alunima</a></li><li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy khoan Decameta</a></li><li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy phay đa năng CNC</a></li><li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy mài, tện, DC 12V</a></li><li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy khoan, cắt CNC</a></li><li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy thông minh N3</a></li><li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">motor R34C đa dụng</a></li><li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy in laser màu 3D</a></li></ul></aside><div class="product-grid"><div class="product__card"><div class="card"><img class="card__img" src="../imgs/high--product/high--product-1.png"><h3 class="card__price">1.150.150 Đ</h3><p class="card__title">máy khoan BLACK DECKER</p><div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><p class="card__evaluate-rate">(12) đánh giá</p></div><div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div></div></div><div class="product__card"><div class="card"><img class="card__img" src="../imgs/high--product/high--product-2.png"><h3 class="card__price">1.150.150 Đ</h3><p class="card__title">máy khoan BLACK DECKER</p><div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><p class="card__evaluate-rate">(12) đánh giá</p></div><div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div></div></div><div class="product__card"><div class="card"><img class="card__img" src="../imgs/high--product/high--product-3.png"><h3 class="card__price">1.150.150 Đ</h3><p class="card__title">máy khoan BLACK DECKER</p><div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><p class="card__evaluate-rate">(12) đánh giá</p></div><div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div></div></div><div class="product__card"><div class="card"><img class="card__img" src="../imgs/high--product/high--product-4.png"><h3 class="card__price">1.150.150 Đ</h3><p class="card__title">máy khoan BLACK DECKER</p><div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><p class="card__evaluate-rate">(12) đánh giá</p></div><div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div></div></div><div class="product__card"><div class="card"><img class="card__img" src="../imgs/high--product/high--product-5.png"><h3 class="card__price">1.150.150 Đ</h3><p class="card__title">máy khoan BLACK DECKER</p><div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><p class="card__evaluate-rate">(12) đánh giá</p></div><div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div></div></div><div class="product__card"><div class="card"><img class="card__img" src="../imgs/high--product/high--product-6.png"><h3 class="card__price">1.150.150 Đ</h3><p class="card__title">máy khoan BLACK DECKER</p><div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><p class="card__evaluate-rate">(12) đánh giá</p></div><div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div></div></div></div></div></section><section class="section-newproduct"><div class="section__heading"><div class="section__heading__left"><i class="fas fa-th-large"></i><p class="heading__title">sản phẩm mới</p></div><div class="section__heading__right"><a class="heading-category border-89">máy khoan</a><a class="heading-category border-89">máy in 3D</a><a class="heading-category border-89">máy CNC</a><a class="heading-category border-89">máy tiện</a><a class="heading-category border-89">máy khác</a><i class="fas fa-caret-left border-89"></i><i class="fas fa-caret-right border-89"></i></div></div><div class="section__content"><div class="product-grid"><div class="product__card"><div class="card"><img class="card__img" src="../imgs/new--product/new--product-1.png"><h3 class="card__price">1.150.150 Đ</h3><p class="card__title">máy khoan BLACK DECKER</p><div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><p class="card__evaluate-rate">(12) đánh giá</p></div><div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div></div></div><div class="product__card"><div class="card"><img class="card__img" src="../imgs/new--product/new--product-2.png"><h3 class="card__price">1.150.150 Đ</h3><p class="card__title">máy khoan BLACK DECKER</p><div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><p class="card__evaluate-rate">(12) đánh giá</p></div><div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div></div></div><div class="product__card"><div class="card"><img class="card__img" src="../imgs/new--product/new--product-3.png"><h3 class="card__price">1.150.150 Đ</h3><p class="card__title">máy khoan BLACK DECKER</p><div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><p class="card__evaluate-rate">(12) đánh giá</p></div><div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div></div></div></div></div></section><div class="section-banner"><div class="banner"><img class="banner--img" src="../imgs/banner/banner-1.png" alt="#"></div><div class="banner"><img class="banner--img" src="../imgs/banner/banner-2.png" alt="#"></div></div><section class="section-sale"><div class="section__heading"><div class="section__heading__left"><i class="fas fa-th-large"></i><p class="heading__title">sản phẩm bán chạy</p></div><div class="section__heading__right"><a class="heading-category border-89">máy khoan</a><a class="heading-category border-89">máy in 3D</a><a class="heading-category border-89">máy CNC</a><a class="heading-category border-89">máy tiện</a><a class="heading-category border-89">máy khác</a><i class="fas fa-caret-left border-89"></i><i class="fas fa-caret-right border-89"></i></div></div><div class="section__content"><div class="sale-grid"><div class="product__card product__card--1"><div class="card"><img class="card__img" src="../imgs/hot--product/hot--product-1.png"><h3 class="card__price">1.150.150 Đ</h3><p class="card__title">máy khoan BLACK DECKER</p><div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><p class="card__evaluate-rate">(12) đánh giá</p></div><div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div></div></div><div class="product__card product__card--2"><div class="card"><img class="card__img" src="../imgs/hot--product/hot--product-center.png"><h3 class="card__price">1.150.150 Đ</h3><p class="card__title">máy khoan BLACK DECKER</p><div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><p class="card__evaluate-rate">(12) đánh giá</p></div><div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div></div></div><div class="product__card product__card--3"><div class="card"><img class="card__img" src="../imgs/hot--product/hot--product-2.png"><h3 class="card__price">1.150.150 Đ</h3><p class="card__title">máy khoan BLACK DECKER</p><div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><p class="card__evaluate-rate">(12) đánh giá</p></div><div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div></div></div><div class="product__card product__card--4"><div class="card"><img class="card__img" src="../imgs/hot--product/hot--product-3.png"><h3 class="card__price">1.150.150 Đ</h3><p class="card__title">máy khoan BLACK DECKER</p><div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><p class="card__evaluate-rate">(12) đánh giá</p></div><div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div></div></div><div class="product__card product__card--5"><div class="card"><img class="card__img" src="../imgs/hot--product/hot--product-4.png"><h3 class="card__price">1.150.150 Đ</h3><p class="card__title">máy khoan BLACK DECKER</p><div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><p class="card__evaluate-rate">(12) đánh giá</p></div><div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div></div></div></div></div></section><section class="banner-bottom"><div class="banner-bottom__img"><img src="../imgs/banner.png"></div><div class="banner-bottom__content"><h1 class="banner-bottom__title">rocket wokaru</h1><p class="banner-bottom__text">máy cắt, khoan đa năng tích hợp điều khiển từ xa loại nhỏ thích hợp với các hộ gia đình</p><div class="banner__btn"><div class="banner__btn--buy">mua ngay</div><div class="banner__btn--info">chi tiết</div></div></div></section><section class="section-newreceive"><div class="section__heading"><div class="section__heading__left"><i class="fas fa-th-large"></i><p class="heading__title">hàng mới về</p></div><div class="section__heading__right"><i class="fas fa-caret-left border-89"></i><i class="fas fa-caret-right border-89"></i></div></div><div class="newreceive-grid"><div class="card-width"><div class="card"><div class="card__img"><img class="card__img-img" src="../imgs/new--receive/new--receive-1.png"></div><div class="card__content"><p class="card__title">máy khoan CNC 3D</p><div class="card__evaluate"><p class="card__evaluate-rate">(12) đánh giá</p></div><p class="card__text">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment...</p><h3 class="card__price">2.350.000Đ</h3><div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div></div></div></div><div class="card-width"><div class="card"><div class="card__img"><img class="card__img-img" src="../imgs/new--receive/new--receive-2.png"></div><div class="card__content"><p class="card__title">máy khoan CNC 3D</p><div class="card__evaluate"><p class="card__evaluate-rate">(12) đánh giá</p></div><p class="card__text">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment...</p><h3 class="card__price">2.350.000Đ</h3><div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div></div></div></div><div class="card-width"><div class="card"><div class="card__img"><img class="card__img-img" src="../imgs/new--receive/new--receive-3.png"></div><div class="card__content"><p class="card__title">máy khoan CNC 3D</p><div class="card__evaluate"><p class="card__evaluate-rate">(12) đánh giá</p></div><p class="card__text">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment...</p><h3 class="card__price">2.350.000Đ</h3><div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div></div></div></div><div class="card-width"><div class="card"><div class="card__img"><img class="card__img-img" src="../imgs/new--receive/new--receive-4.png"></div><div class="card__content"><p class="card__title">máy khoan CNC 3D</p><div class="card__evaluate"><p class="card__evaluate-rate">(12) đánh giá</p></div><p class="card__text">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment...</p><h3 class="card__price">2.350.000Đ</h3><div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div></div></div></div></div></section><section class="slider__corp"><div class="slider-corp"><button class="slider-corp__btn" id="btn__left" onclick="moveLeft()">&#10092;</button><ul class="slider-corp__list" id="slider-corp__list"><li class="slider-corp__list-item"><img src="../imgs/corp/corp--1.png"></li><li class="slider-corp__list-item"><img src="../imgs/corp/corp--2.png"></li><li class="slider-corp__list-item"><img src="../imgs/corp/corp--3.png"></li><li class="slider-corp__list-item"><img src="../imgs/corp/corp--4.png"></li><li class="slider-corp__list-item"><img src="../imgs/corp/corp--5.png"></li></ul><button class="slider-corp__btn" id="btn__right" onclick="moveRight()">&#10093;</button></div></section><section class="news-letter"><p class="news-letter__title">Đăng kí để nhận tin tức khuyến mãi hàng tuần</p><div class="news-letter__form"><input class="news-letter__form--input" type="email" placeholder="Nhập email của bạn..."><a class="news-letter__form--btn" href>đăng kí</a></div></section><footer class="footer-wrapper"><div class="footer"><div class="footer__top"><div class="footer__top__block"><div class="footer__top__heading"><i class="fas fa-th-large"></i><h2 class="title">về chúng tôi</h2></div><div class="footer__top__content"><div class="footer__top__content--mt23"><i></i><a>Công ty Cổ Phần Công Nghệ DKT đã và đang khẳng định được vị trí hàng đầu trong lĩnh vực Thương mại điện tử.</a></div><div class="footer__top__content--mt23"><i class="fas fa-map-marker-alt"></i><a>Tầng 4 - Tòa nhà Hanoi Group 442 Đội Cấn Ba Đình - Hà Nội</a></div><div class="footer__top__content--mt23"><i class="fas fa-envelope"></i><a>support@dkt.com.vn</a></div><div class="footer__top__content--mt23"><i class="fas fa-mobile-alt"></i><a>(84-4) 66558868 - (84-4) 37868904</a></div></div></div><div class="footer__top__block"><div class="footer__top__heading"><i class="fas fa-th-large"></i><h2 class="title">chính sách</h2></div><div class="footer__top__content"><div class="footer__top__content--mt23"><a>chính sách giao hàng</a></div><div class="footer__top__content--mt23"><a>chính sách đổi sản phẩm</a></div><div class="footer__top__content--mt23"><a>chính sách bảo hành</a></div><div class="footer__top__content--mt23"><a>chính sách trả góp</a></div><div class="footer__top__content--mt23"><a>giới thiệu hàng đổi trả</a></div><div class="footer__top__content--mt23"><a>vận chuyển miễn phí</a></div></div></div><div class="footer__top__block"><div class="footer__top__heading"><i class="fas fa-th-large"></i><h2 class="title">dịch vụ &amp; hỗ trợ</h2></div><div class="footer__top__content"><div class="footer__top__content--mt23"><a>hệ thống cửa hàng</a></div><div class="footer__top__content--mt23"><a>hướng dẫn mua hàng</a></div><div class="footer__top__content--mt23"><a>hướng dẫn thanh toán</a></div><div class="footer__top__content--mt23"><a>tích điểm đổi thưởng</a></div><div class="footer__top__content--mt23"><a>dịch vụ đổi trả hàng</a></div><div class="footer__top__content--mt23"><a>câu hỏi thường gặp</a></div></div></div><div class="footer__top__block"><div class="footer__top__heading"><i class="fas fa-th-large"></i><h2 class="title">tin tức -  sự kiện</h2></div><div class="footer__top__content"><div class="footer__top__content--mt23"><a>tin tức mới nhất</a></div><div class="footer__top__content--mt23"><a>tin tức khuyến mại</a></div><div class="footer__top__content--mt23"><a>tuyển dụng, đãi ngộ</a></div><div class="footer__top__content--mt23"><a>download tài liệu</a></div><div class="footer__top__content--mt23"><a>chương trình đối tác</a></div><div class="footer__top__content--mt23"><a>nhà phát triển ứng dụng</a></div></div></div><div class="footer__top__block"><div class="footer__top__heading"><i class="fas fa-th-large"></i><h2 class="title">kết nôi</h2></div><div class="footer__top__content"><div class="footer__top__content--mt23"><i class="fab fa-facebook-f"></i><a>facebook</a></div><div class="footer__top__content--mt23"><i class="fab fa-twitter"></i><a>twitter</a></div><div class="footer__top__content--mt23"><i class="fab fa-google-plus-g"></i><a>google</a></div><div class="footer__top__content--mt23"><i class="fab fa-skype"></i><a>skype</a></div><div class="footer__top__content--mt23"><i class="fab fa-instagram"></i><a>instagram</a></div></div></div></div><div class="footer__bottom"><div class="footer__bottom__pay"><p class="footer__bottom__title">Thanh toán :</p><div class="pay__grid"><img src="../imgs/pay/pay--1.png"><img src="../imgs/pay/pay--2.png"><img src="../imgs/pay/pay--3.png"><img src="../imgs/pay/pay--4.png"><img src="../imgs/pay/pay--5.png"><img src="../imgs/pay/pay--6.png"><img src="../imgs/pay/pay--7.png"><img src="../imgs/pay/pay--8.png"></div></div><div class="footer__bottom__ad"><p class="footer__bottom__title">Giải đáp nhanh :</p><div class="advisory"><div class="advisory__icon--radius"><i class="fas fa-phone rotate90"></i></div><div class="advisory__content"><p class="advisory__content-title">Tư vấn miễn phí (24/7)</p><h3 class="advisory__content-phone">1900 650 650</h3></div></div><div class="advisory"><div class="advisory__icon--radius"><i class="fas fa-comments"></i></div><div class="advisory__content"><p class="advisory__content-title">Góp ý - phản hồi - thắc mắc</p><h3 class="advisory__content-phone">1900 650 650</h3></div></div></div></div></div></footer><script>function myFunc() {
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Machine Company</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__navigation--wrapper">
+        <div class="header__navigation"><a class="header__navigation--social" href="#"><i class="fab fa-facebook-f"></i></a><a class="header__navigation--social" href="#"><i class="fab fa-google-plus-g"></i></a><a class="header__navigation--social" href="#"><i class="fab fa-instagram"></i></a><a class="header__navigation--social" href="#"><i class="fab fa-twitter"></i></a>
+          <div class="header__navigation__form login">
+            <div class="login__btn"><a href="#" title="Đăng kí">đăng kí</a></div>
+            <div class="login__btn"><a href="#" title="Đăng nhập">đăng nhập</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="header__center--wrapper">
+        <div class="header__center"><img class="header__center-logo" src="../imgs/Logo.png">
+          <div class="header__center-middle">
+            <div class="header__center-contact">
+              <h2 class="header__center-heading">hotline :</h2>
+              <p class="header__center-phone">(04) 9500 9650 - (04) 9500 8850 </p>
+            </div>
+            <div class="header__center-contact">
+              <h2 class="header__center-heading">đặt hàng nhanh :</h2>
+              <p class="header__center-phone">(04) 9500 9650 - (04) 9500 8850 </p>
+            </div>
+          </div>
+          <div class="header__center-form header__search-form">
+            <input class="header__search-form__input" placeholder="Tìm kiếm..."><i class="fas fa-search header__search-form__btn"></i>
+          </div>
+        </div>
+      </div>
+      <div class="header__navbar--wrapper">
+        <div class="header__navbar">
+          <nav class="header__navbar__menu" id="collapse"><a class="header__navbar__menu-item" onclick="myFunc()"><i class="fa fa-bars"></i></a><a class="header__navbar__menu-item" href="#">trang chủ</a><a class="header__navbar__menu-item" href="#">giới thiệu</a><a class="header__navbar__menu-item" href="#">sản phẩm</a><a class="header__navbar__menu-item" href="#">tin khuyến mại</a><a class="header__navbar__menu-item" href="#">dịch vụ</a><a class="header__navbar__menu-item" href="#">liên hệ</a></nav><i class="header__navbar__cart fas fa-shopping-basket"></i>
+        </div>
+      </div>
+    </header>
+    <div class="header__slider">
+      <div class="slider" id="slider">
+        <input id="i1" type="radio" name="images" checked>
+        <input id="i2" type="radio" name="images">
+        <input id="i3" type="radio" name="images">
+        <div class="slider__img" id="one"><img class="slider__img-move" src="../imgs/slider.png" alt="" onclick="changeIt(1)"></div>
+        <div class="slider__img" id="two"><img class="slider__img-move" src="../imgs/slider.png" alt="" onclick="changeIt(2)"></div>
+        <div class="slider__img" id="three"><img class="slider__img-move" src="../imgs/slider.png" alt="" onclick="changeIt(3)"></div>
+        <div class="slider__nav" id="slider__nav">
+          <label class="slider__nav__dots" id="dot1" for="i1"></label>
+          <label class="slider__nav__dots" id="dot2" for="i2"></label>
+          <label class="slider__nav__dots" id="dot3" for="i3"></label>
+        </div>
+      </div>
+      <div class="slide-menu">
+        <ul class="menu__list">
+          <li class="menu__list-item list-item"><i class="list-item__icon fas fa-plane list-item__icon--rotate"></i>
+            <div>
+              <h1 class="list-item__title">miễn phí vận chuyển</h1>
+              <p class="list-item__parap">Chúng tôi vận chuyển miễn phí với các  đơn hàng trị giá trên 1.000.000Đ</p>
+            </div>
+          </li>
+          <li class="menu__list-item list-item"><i class="list-item__icon fas fa-sync-alt"></i>
+            <div>
+              <h1 class="list-item__title">chính sách đổi trả</h1>
+              <p class="list-item__parap">Nếu phát hiện lỗi của nhà sản xuất,  chúng tôi sẽ đổi mới sản phẩm trong 7 ngày đầu tiên</p>
+            </div>
+          </li>
+          <li class="menu__list-item list-item"><i class="list-item__icon fas fa-gift"></i>
+            <div>
+              <h1 class="list-item__title">khuyển mại hàng tuần</h1>
+              <p class="list-item__parap">Mỗi thứ 7 hàng tuần đều có chương  trình giảmgiá và khuyến mại lớn</p>
+            </div>
+          </li>
+          <li class="menu__list-item list-item"><i class="list-item__icon fas fa-thumbs-up"></i>
+            <div>
+              <h1 class="list-item__title">cam kết hàng chính hãng</h1>
+              <p class="list-item__parap">Chúng tôi cam kết bán hàng chính hãng  100% với tất cả các loại sản phẩm</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <section class="section-highproduct">
+          <div class="section__heading">
+            <div class="section__heading__left"><i class="fas fa-th-large"></i>
+              <p class="heading__title">sản phẩm nổi bật</p>
+            </div>
+            <div class="section__heading__right"><i class="fas fa-caret-left border-89"></i><i class="fas fa-caret-right border-89"></i>
+            </div>
+          </div>
+      <div class="section__content">
+        <aside class="aside">
+              <ul class="aside__list" id="aside__list">
+                <li class="aside__list-item active"><i class="fas fa-bars"></i><a class="aside__text">DANH MỤC SẢN PHẨM</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy khoan, cắt CNC</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy in phun cỡ lớn</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy quét canon 3D</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy hàn điện Alunima</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy khoan Decameta</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy phay đa năng CNC</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy mài, tện, DC 12V</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy khoan, cắt CNC</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy thông minh N3</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">motor R34C đa dụng</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy in laser màu 3D</a></li>
+              </ul>
+        </aside>
+        <div class="product-grid">
+              <div class="product__card">
+                <div class="card"><img class="card__img" src="../imgs/high--product/high--product-1.png">
+                  <h3 class="card__price">1.150.150 Đ</h3>
+                  <p class="card__title">máy khoan BLACK DECKER</p>
+                  <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
+                    <p class="card__evaluate-rate">(12) đánh giá</p>
+                  </div>
+                  <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
+                </div>
+              </div>
+              <div class="product__card">
+                <div class="card"><img class="card__img" src="../imgs/high--product/high--product-2.png">
+                  <h3 class="card__price">1.150.150 Đ</h3>
+                  <p class="card__title">máy khoan BLACK DECKER</p>
+                  <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
+                    <p class="card__evaluate-rate">(12) đánh giá</p>
+                  </div>
+                  <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
+                </div>
+              </div>
+              <div class="product__card">
+                <div class="card"><img class="card__img" src="../imgs/high--product/high--product-3.png">
+                  <h3 class="card__price">1.150.150 Đ</h3>
+                  <p class="card__title">máy khoan BLACK DECKER</p>
+                  <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
+                    <p class="card__evaluate-rate">(12) đánh giá</p>
+                  </div>
+                  <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
+                </div>
+              </div>
+              <div class="product__card">
+                <div class="card"><img class="card__img" src="../imgs/high--product/high--product-4.png">
+                  <h3 class="card__price">1.150.150 Đ</h3>
+                  <p class="card__title">máy khoan BLACK DECKER</p>
+                  <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
+                    <p class="card__evaluate-rate">(12) đánh giá</p>
+                  </div>
+                  <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
+                </div>
+              </div>
+              <div class="product__card">
+                <div class="card"><img class="card__img" src="../imgs/high--product/high--product-5.png">
+                  <h3 class="card__price">1.150.150 Đ</h3>
+                  <p class="card__title">máy khoan BLACK DECKER</p>
+                  <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
+                    <p class="card__evaluate-rate">(12) đánh giá</p>
+                  </div>
+                  <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
+                </div>
+              </div>
+              <div class="product__card">
+                <div class="card"><img class="card__img" src="../imgs/high--product/high--product-6.png">
+                  <h3 class="card__price">1.150.150 Đ</h3>
+                  <p class="card__title">máy khoan BLACK DECKER</p>
+                  <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
+                    <p class="card__evaluate-rate">(12) đánh giá</p>
+                  </div>
+                  <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-newproduct">
+          <div class="section__heading">
+            <div class="section__heading__left"><i class="fas fa-th-large"></i>
+              <p class="heading__title">sản phẩm mới</p>
+            </div>
+            <div class="section__heading__right"><a class="heading-category border-89">máy khoan</a><a class="heading-category border-89">máy in 3D</a><a class="heading-category border-89">máy CNC</a><a class="heading-category border-89">máy tiện</a><a class="heading-category border-89">máy khác</a><i class="fas fa-caret-left border-89"></i><i class="fas fa-caret-right border-89"></i>
+            </div>
+          </div>
+      <div class="section__content">
+        <div class="product-grid">
+              <div class="product__card">
+                <div class="card"><img class="card__img" src="../imgs/new--product/new--product-1.png">
+                  <h3 class="card__price">1.150.150 Đ</h3>
+                  <p class="card__title">máy khoan BLACK DECKER</p>
+                  <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
+                    <p class="card__evaluate-rate">(12) đánh giá</p>
+                  </div>
+                  <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
+                </div>
+              </div>
+              <div class="product__card">
+                <div class="card"><img class="card__img" src="../imgs/new--product/new--product-2.png">
+                  <h3 class="card__price">1.150.150 Đ</h3>
+                  <p class="card__title">máy khoan BLACK DECKER</p>
+                  <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
+                    <p class="card__evaluate-rate">(12) đánh giá</p>
+                  </div>
+                  <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
+                </div>
+              </div>
+              <div class="product__card">
+                <div class="card"><img class="card__img" src="../imgs/new--product/new--product-3.png">
+                  <h3 class="card__price">1.150.150 Đ</h3>
+                  <p class="card__title">máy khoan BLACK DECKER</p>
+                  <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
+                    <p class="card__evaluate-rate">(12) đánh giá</p>
+                  </div>
+                  <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </section>
+        <div class="section-banner">
+          <div class="banner"><img class="banner--img" src="../imgs/banner/banner-1.png" alt="#"></div>
+          <div class="banner"><img class="banner--img" src="../imgs/banner/banner-2.png" alt="#"></div>
+        </div>
+    <section class="section-sale">
+          <div class="section__heading">
+            <div class="section__heading__left"><i class="fas fa-th-large"></i>
+              <p class="heading__title">sản phẩm bán chạy</p>
+            </div>
+            <div class="section__heading__right"><a class="heading-category border-89">máy khoan</a><a class="heading-category border-89">máy in 3D</a><a class="heading-category border-89">máy CNC</a><a class="heading-category border-89">máy tiện</a><a class="heading-category border-89">máy khác</a><i class="fas fa-caret-left border-89"></i><i class="fas fa-caret-right border-89"></i>
+            </div>
+          </div>
+      <div class="section__content">
+        <div class="sale-grid">
+              <div class="product__card product__card--1">
+                <div class="card"><img class="card__img" src="../imgs/hot--product/hot--product-1.png">
+                  <h3 class="card__price">1.150.150 Đ</h3>
+                  <p class="card__title">máy khoan BLACK DECKER</p>
+                  <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
+                    <p class="card__evaluate-rate">(12) đánh giá</p>
+                  </div>
+                  <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
+                </div>
+              </div>
+              <div class="product__card product__card--2">
+                <div class="card"><img class="card__img" src="../imgs/hot--product/hot--product-center.png">
+                  <h3 class="card__price">1.150.150 Đ</h3>
+                  <p class="card__title">máy khoan BLACK DECKER</p>
+                  <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
+                    <p class="card__evaluate-rate">(12) đánh giá</p>
+                  </div>
+                  <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
+                </div>
+              </div>
+              <div class="product__card product__card--3">
+                <div class="card"><img class="card__img" src="../imgs/hot--product/hot--product-2.png">
+                  <h3 class="card__price">1.150.150 Đ</h3>
+                  <p class="card__title">máy khoan BLACK DECKER</p>
+                  <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
+                    <p class="card__evaluate-rate">(12) đánh giá</p>
+                  </div>
+                  <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
+                </div>
+              </div>
+              <div class="product__card product__card--4">
+                <div class="card"><img class="card__img" src="../imgs/hot--product/hot--product-3.png">
+                  <h3 class="card__price">1.150.150 Đ</h3>
+                  <p class="card__title">máy khoan BLACK DECKER</p>
+                  <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
+                    <p class="card__evaluate-rate">(12) đánh giá</p>
+                  </div>
+                  <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
+                </div>
+              </div>
+              <div class="product__card product__card--5">
+                <div class="card"><img class="card__img" src="../imgs/hot--product/hot--product-4.png">
+                  <h3 class="card__price">1.150.150 Đ</h3>
+                  <p class="card__title">máy khoan BLACK DECKER</p>
+                  <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
+                    <p class="card__evaluate-rate">(12) đánh giá</p>
+                  </div>
+                  <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </section>
+    <section class="banner-bottom">
+      <div class="banner-bottom__img"><img src="../imgs/banner.png"></div>
+      <div class="banner-bottom__content">
+        <h1 class="banner-bottom__title">rocket wokaru</h1>
+        <p class="banner-bottom__text">máy cắt, khoan đa năng tích hợp điều khiển từ xa loại nhỏ thích hợp với các hộ gia đình</p>
+        <div class="banner__btn">
+          <div class="banner__btn--buy">mua ngay</div>
+          <div class="banner__btn--info">chi tiết</div>
+        </div>
+      </div>
+    </section>
+    <section class="section-newreceive">
+          <div class="section__heading">
+            <div class="section__heading__left"><i class="fas fa-th-large"></i>
+              <p class="heading__title">hàng mới về</p>
+            </div>
+            <div class="section__heading__right"><i class="fas fa-caret-left border-89"></i><i class="fas fa-caret-right border-89"></i>
+            </div>
+          </div>
+      <div class="newreceive-grid">
+            <div class="card-width">
+              <div class="card">
+                <div class="card__img"><img class="card__img-img" src="../imgs/new--receive/new--receive-1.png"></div>
+                <div class="card__content">
+                  <p class="card__title">máy khoan CNC 3D</p>
+                  <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
+                    <p class="card__evaluate-rate">(12) đánh giá</p>
+                  </div>
+                  <p class="card__text">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment...</p>
+                  <h3 class="card__price">2.350.000Đ</h3>
+                  <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-width">
+              <div class="card">
+                <div class="card__img"><img class="card__img-img" src="../imgs/new--receive/new--receive-2.png"></div>
+                <div class="card__content">
+                  <p class="card__title">máy khoan CNC 3D</p>
+                  <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
+                    <p class="card__evaluate-rate">(12) đánh giá</p>
+                  </div>
+                  <p class="card__text">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment...</p>
+                  <h3 class="card__price">2.350.000Đ</h3>
+                  <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-width">
+              <div class="card">
+                <div class="card__img"><img class="card__img-img" src="../imgs/new--receive/new--receive-3.png"></div>
+                <div class="card__content">
+                  <p class="card__title">máy khoan CNC 3D</p>
+                  <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
+                    <p class="card__evaluate-rate">(12) đánh giá</p>
+                  </div>
+                  <p class="card__text">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment...</p>
+                  <h3 class="card__price">2.350.000Đ</h3>
+                  <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-width">
+              <div class="card">
+                <div class="card__img"><img class="card__img-img" src="../imgs/new--receive/new--receive-4.png"></div>
+                <div class="card__content">
+                  <p class="card__title">máy khoan CNC 3D</p>
+                  <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
+                    <p class="card__evaluate-rate">(12) đánh giá</p>
+                  </div>
+                  <p class="card__text">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment...</p>
+                  <h3 class="card__price">2.350.000Đ</h3>
+                  <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
+                </div>
+              </div>
+            </div>
+      </div>
+    </section>
+    <section class="slider__corp">
+      <div class="slider-corp">
+        <button class="slider-corp__btn" id="btn__left" onclick="moveLeft()">&#10092;</button>
+        <ul class="slider-corp__list" id="slider-corp__list">
+              <li class="slider-corp__list-item"><img src="../imgs/corp/corp--1.png"></li>
+              <li class="slider-corp__list-item"><img src="../imgs/corp/corp--2.png"></li>
+              <li class="slider-corp__list-item"><img src="../imgs/corp/corp--3.png"></li>
+              <li class="slider-corp__list-item"><img src="../imgs/corp/corp--4.png"></li>
+              <li class="slider-corp__list-item"><img src="../imgs/corp/corp--5.png"></li>
+        </ul>
+        <button class="slider-corp__btn" id="btn__right" onclick="moveRight()">&#10093;</button>
+      </div>
+    </section>
+    <section class="news-letter">
+      <p class="news-letter__title">Đăng kí để nhận tin tức khuyến mãi hàng tuần</p>
+      <div class="news-letter__form">
+        <input class="news-letter__form--input" type="email" placeholder="Nhập email của bạn..."><a class="news-letter__form--btn" href>đăng kí</a>
+      </div>
+    </section>
+    <footer class="footer-wrapper">
+      <div class="footer">
+        <div class="footer__top">
+              <div class="footer__top__block">
+                <div class="footer__top__heading"><i class="fas fa-th-large"></i>
+                  <h2 class="title">về chúng tôi</h2>
+                </div>
+                <div class="footer__top__content">
+                  <div class="footer__top__content--mt23"><i></i><a>Công ty Cổ Phần Công Nghệ DKT đã và đang khẳng định được vị trí hàng đầu trong lĩnh vực Thương mại điện tử.</a></div>
+                  <div class="footer__top__content--mt23"><i class="fas fa-map-marker-alt"></i><a>Tầng 4 - Tòa nhà Hanoi Group 442 Đội Cấn Ba Đình - Hà Nội</a></div>
+                  <div class="footer__top__content--mt23"><i class="fas fa-envelope"></i><a>support@dkt.com.vn</a></div>
+                  <div class="footer__top__content--mt23"><i class="fas fa-mobile-alt"></i><a>(84-4) 66558868 - (84-4) 37868904</a></div>
+                </div>
+              </div>
+              <div class="footer__top__block">
+                <div class="footer__top__heading"><i class="fas fa-th-large"></i>
+                  <h2 class="title">chính sách</h2>
+                </div>
+                <div class="footer__top__content">
+                  <div class="footer__top__content--mt23"><a>chính sách giao hàng</a></div>
+                  <div class="footer__top__content--mt23"><a>chính sách đổi sản phẩm</a></div>
+                  <div class="footer__top__content--mt23"><a>chính sách bảo hành</a></div>
+                  <div class="footer__top__content--mt23"><a>chính sách trả góp</a></div>
+                  <div class="footer__top__content--mt23"><a>giới thiệu hàng đổi trả</a></div>
+                  <div class="footer__top__content--mt23"><a>vận chuyển miễn phí</a></div>
+                </div>
+              </div>
+              <div class="footer__top__block">
+                <div class="footer__top__heading"><i class="fas fa-th-large"></i>
+                  <h2 class="title">dịch vụ &amp; hỗ trợ</h2>
+                </div>
+                <div class="footer__top__content">
+                  <div class="footer__top__content--mt23"><a>hệ thống cửa hàng</a></div>
+                  <div class="footer__top__content--mt23"><a>hướng dẫn mua hàng</a></div>
+                  <div class="footer__top__content--mt23"><a>hướng dẫn thanh toán</a></div>
+                  <div class="footer__top__content--mt23"><a>tích điểm đổi thưởng</a></div>
+                  <div class="footer__top__content--mt23"><a>dịch vụ đổi trả hàng</a></div>
+                  <div class="footer__top__content--mt23"><a>câu hỏi thường gặp</a></div>
+                </div>
+              </div>
+              <div class="footer__top__block">
+                <div class="footer__top__heading"><i class="fas fa-th-large"></i>
+                  <h2 class="title">tin tức -  sự kiện</h2>
+                </div>
+                <div class="footer__top__content">
+                  <div class="footer__top__content--mt23"><a>tin tức mới nhất</a></div>
+                  <div class="footer__top__content--mt23"><a>tin tức khuyến mại</a></div>
+                  <div class="footer__top__content--mt23"><a>tuyển dụng, đãi ngộ</a></div>
+                  <div class="footer__top__content--mt23"><a>download tài liệu</a></div>
+                  <div class="footer__top__content--mt23"><a>chương trình đối tác</a></div>
+                  <div class="footer__top__content--mt23"><a>nhà phát triển ứng dụng</a></div>
+                </div>
+              </div>
+              <div class="footer__top__block">
+                <div class="footer__top__heading"><i class="fas fa-th-large"></i>
+                  <h2 class="title">kết nôi</h2>
+                </div>
+                <div class="footer__top__content">
+                  <div class="footer__top__content--mt23"><i class="fab fa-facebook-f"></i><a>facebook</a></div>
+                  <div class="footer__top__content--mt23"><i class="fab fa-twitter"></i><a>twitter</a></div>
+                  <div class="footer__top__content--mt23"><i class="fab fa-google-plus-g"></i><a>google</a></div>
+                  <div class="footer__top__content--mt23"><i class="fab fa-skype"></i><a>skype</a></div>
+                  <div class="footer__top__content--mt23"><i class="fab fa-instagram"></i><a>instagram</a></div>
+                </div>
+              </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__bottom__pay">
+            <p class="footer__bottom__title">Thanh toán :</p>
+            <div class="pay__grid"><img src="../imgs/pay/pay--1.png"><img src="../imgs/pay/pay--2.png"><img src="../imgs/pay/pay--3.png"><img src="../imgs/pay/pay--4.png"><img src="../imgs/pay/pay--5.png"><img src="../imgs/pay/pay--6.png"><img src="../imgs/pay/pay--7.png"><img src="../imgs/pay/pay--8.png">
+            </div>
+          </div>
+          <div class="footer__bottom__ad">
+            <p class="footer__bottom__title">Giải đáp nhanh :</p>
+                <div class="advisory">
+                  <div class="advisory__icon--radius"><i class="fas fa-phone rotate90"></i></div>
+                  <div class="advisory__content">
+                    <p class="advisory__content-title">Tư vấn miễn phí (24/7)</p>
+                    <h3 class="advisory__content-phone">1900 650 650</h3>
+                  </div>
+                </div>
+                <div class="advisory">
+                  <div class="advisory__icon--radius"><i class="fas fa-comments"></i></div>
+                  <div class="advisory__content">
+                    <p class="advisory__content-title">Góp ý - phản hồi - thắc mắc</p>
+                    <h3 class="advisory__content-phone">1900 650 650</h3>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function myFunc() {
     var x = document.getElementById('collapse');
     if (x.className === 'navbar__menu') {
         x.className += ' responsive';
@@ -24,12 +499,13 @@ document.getElementById("slider").style.height = `${hei}px`;
 }
 
 var items = document.getElementsByClassName("aside__list-item")
-var active = document.getElementsByClassName("active")
+var actived = document.getElementsByClassName("active")
 for(var i=0; i<items.length; i++){
   items[i].onclick = function(){
     var list = document.getElementById("aside__list");
     // if (!active) {
         list.insertBefore(this, list.childNodes[0]);
+        actived[0].style.display = "none"
     //}
     //list.style.overflow = "hidden";
   }
@@ -53,4 +529,7 @@ function moveRight(){
   }
 function slide(){
   setInterval(moveRight, 2000);
-}</script></body></html>
+}
+    </script>
+  </body>
+</html>
