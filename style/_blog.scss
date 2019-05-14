@@ -1,0 +1,127 @@
+.section-blog{
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+    &__article {
+        width: 100%;
+        max-width: 875px;
+    }
+    .post {
+        width: 100%;
+        font-size: 1.3rem;
+        border-bottom: 1px solid $--border;
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+        color: $--border;
+        &__img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        &__title {
+            @include heading(1.6rem, $--secondary, 700);
+            font-family: "Roboto", sans-serif;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        &__meta {
+            font-style: italic;
+            & > * {
+                margin-bottom: 10px;
+            }
+            &-time {
+                &::first-letter {
+                    text-transform: uppercase;
+                }
+            }
+            &-author {
+                &--highlight {
+                    color: $--primary;
+                    text-transform: capitalize;
+                }
+                &--icon {
+                    margin-right: 5px;
+                }
+                &--inline {
+                    display: inline;
+                }
+            }
+            &-comment {
+                &--icon {
+                    margin-right: 5px;
+                }
+                &--inline {
+                    display: inline;
+                }
+            }
+        }
+        &__text {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            position: relative;
+            p {
+                &::after {
+                    position: absolute;
+                    content: "[Đọc tiếp]";
+                    color: $--primary;
+                }
+            }
+        }
+    }
+    &__page {
+        font-size: 13px;
+        margin-left: auto;
+        margin-bottom: 40px;
+        &--link {
+          border: 1px solid #cccccc;
+          color: $--border;
+          padding: 13px;
+          margin-right: 5px;
+          transition: .7s;
+          &:active, &:hover {
+            background-color: $--primary;
+            color: #fff;
+            border-color: $--primary;
+          }
+        }
+      }
+    @media (min-width: 864px) {
+        display: flex;
+        .aside-list {
+            margin-right: 30px;
+        }
+        .post {
+            padding-bottom: 30px;
+            &__meta {
+                display: flex;
+                & > * {
+                    margin-right: auto;
+                }
+            }
+        }
+        &__page {
+            margin-bottom: 80px;
+        }
+    }
+    @media (min-width: 992px) {
+        .post {
+            padding-bottom: 40px;
+            &__meta {
+                display: flex;
+                & > * {
+                    margin-right: 30px;
+                }
+            }
+        }
+        &__page {
+            margin-bottom: 80px;
+        }
+    }
+}

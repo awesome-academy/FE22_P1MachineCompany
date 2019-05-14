@@ -1,0 +1,33 @@
+mixin blogDetail(img, title, time, author, comment, text)
+    article.post
+        img.post__img(src= img[0], alt="")
+        .post__title= title
+        .post__meta
+            p.post__meta-time= time
+            .post__meta-author
+                i.post__meta-author--icon.fas.fa-user
+                p.post__meta-author--inline Đăng bởi  
+                    span.post__meta-author--highlight= author
+            .post__meta-comment
+                i.post__meta-comment--icon.fas.fa-comments
+                p.post__meta-comment--inline= comment
+                    span  Bình luận
+        .post__text
+            p= text[0]
+            p= text[1]
+        img.post__img(src= img[1], alt="")
+        .post__text
+            p= text[2]
+            p= text[3]
+        img.post__img(src= img[2], alt="")
+        .post__text
+            p= text[4]
+            p= text[5]
+            p= text[6]
+        .post-bottom
+            h1.post-bottom--title tags:
+            each val in tags
+                p.post-bottom--item= val
+            h1.post-bottom--title.post-bottom--ml share:
+            each value in share
+                a.post-bottom--icon(href="#", class= value)

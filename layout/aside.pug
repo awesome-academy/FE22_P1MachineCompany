@@ -23,3 +23,31 @@ mixin asideListProduct(iconTitle, title, img, name, price)
                     p.aside__list-item__content--name= name[i]
                     p.aside__list-item__content--price= price[i]
         -}
+mixin asideListNone(iconTitle, title, icon, text)
+    ul.aside__list.aside__list--bordernone#aside__list
+        if title
+            li.aside__list-item.aside__list-item--nosign.active
+                i(class= iconTitle)
+                a.aside__text= title
+        each val in text
+            li.aside__list-item
+                i(class= icon)
+                a.aside__text(href="#")= val
+mixin asideGrid(iconTitle, title, imgs)
+    ul.aside__list.aside__list--bordernone#aside__list
+        if title
+            li.aside__list-item.aside__list-item--none.active
+                i(class= iconTitle)
+                a.aside__text= title
+            li.aside__galery-grid
+                each val in imgs
+                    img(src=val, alt="#")
+mixin asideTags(iconTitle, title, tags)
+    ul.aside__list.aside__list--bordernone#aside__list
+        if title
+            li.aside__list-item.aside__list-item--none.active
+                i(class= iconTitle)
+                a.aside__text= title
+            li.aside__tag
+                each val in tags
+                    a.aside__tag-item(href="#")= val

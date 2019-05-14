@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/blog.css">
+    <title>Machine Company</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__navigation--wrapper">
+        <div class="header__navigation"><a class="header__navigation--social" href="#"><i class="fab fa-facebook-f"></i></a><a class="header__navigation--social" href="#"><i class="fab fa-google-plus-g"></i></a><a class="header__navigation--social" href="#"><i class="fab fa-instagram"></i></a><a class="header__navigation--social" href="#"><i class="fab fa-twitter"></i></a>
+          <div class="header__navigation__form login">
+            <div class="login__btn"><a href="#" title="Đăng kí">đăng kí</a></div>
+            <div class="login__btn"><a href="#" title="Đăng nhập">đăng nhập</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="header__center--wrapper">
+        <div class="header__center"><img class="header__center-logo" src="../imgs/Logo.png">
+          <div class="header__center-middle">
+            <div class="header__center-contact">
+              <h2 class="header__center-heading">hotline :</h2>
+              <p class="header__center-phone">(04) 9500 9650 - (04) 9500 8850 </p>
+            </div>
+            <div class="header__center-contact">
+              <h2 class="header__center-heading">đặt hàng nhanh :</h2>
+              <p class="header__center-phone">(04) 9500 9650 - (04) 9500 8850 </p>
+            </div>
+          </div>
+          <div class="header__center-form header__search-form">
+            <input class="header__search-form__input" placeholder="Tìm kiếm..."><i class="fas fa-search header__search-form__btn"></i>
+          </div>
+        </div>
+      </div>
+      <div class="header__navbar--wrapper">
+        <div class="header__navbar">
+          <nav class="header__navbar__menu" id="collapse"><a class="header__navbar__menu-item" onclick="myFunc()"><i class="fa fa-bars"></i></a><a class="header__navbar__menu-item" href="#">trang chủ</a><a class="header__navbar__menu-item" href="#">giới thiệu</a><a class="header__navbar__menu-item" href="#">sản phẩm</a><a class="header__navbar__menu-item" href="#">tin khuyến mại</a><a class="header__navbar__menu-item" href="#">dịch vụ</a><a class="header__navbar__menu-item" href="#">liên hệ</a></nav><i class="header__navbar__cart fas fa-shopping-basket"></i>
+        </div>
+      </div>
+    </header>
+        <nav arial-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item active"><a href="#">trang chủ</a></li>
+            <li class="breadcrumb-item"><a href="#">tin tức</a></li>
+          </ol>
+        </nav>
+    <section class="section-blog">
+      <div class="aside-list">
+        <aside class="aside">
+              <ul class="aside__list" id="aside__list">
+                <li class="aside__list-item active"><i class="fas fa-bars"></i><a class="aside__text">DANH MỤC SẢN PHẨM</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy khoan, cắt CNC</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy in phun cỡ lớn</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy quét canon 3D</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy hàn điện Alunima</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy khoan Decameta</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy phay đa năng CNC</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy mài, tện, DC 12V</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy khoan, cắt CNC</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy thông minh N3</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">motor R34C đa dụng</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">máy in laser màu 3D</a></li>
+              </ul>
+        </aside>
+        <aside class="aside">
+              <ul class="aside__list aside__list--bordernone" id="aside__list">
+                <li class="aside__list-item aside__list-item--nosign active"><i class="fas fa-th-large"></i><a class="aside__text">DANH MỤC TIN TỨC</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">đời sống pháp luật(5)</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">kinh tế trong nước(8)</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">sức khỏe và gia đình(9)</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">công nghệ thông tin(5)</a></li>
+                <li class="aside__list-item"><i class="fas fa-th-large"></i><a class="aside__text" href="#">tin tức khác(12)</a></li>
+              </ul>
+        </aside>
+        <aside class="aside">
+              <ul class="aside__list aside__list--bordernone" id="aside__list">
+                <li class="aside__list-item aside__list-item--none active"><i class="fas fa-th-large"></i><a class="aside__text">THƯ VIỆN HÌNH ẢNH</a></li>
+                <li class="aside__galery-grid"><img src="../imgs/galery/galery--img-1.png" alt="#"><img src="../imgs/galery/galery--img-2.png" alt="#"><img src="../imgs/galery/galery--img-3.png" alt="#"><img src="../imgs/galery/galery--img-4.png" alt="#"><img src="../imgs/galery/galery--img-5.png" alt="#"><img src="../imgs/galery/galery--img-6.png" alt="#">
+                </li>
+              </ul>
+        </aside>
+        <aside class="aside">
+              <ul class="aside__list aside__list--bordernone" id="aside__list">
+                <li class="aside__list-item aside__list-item--none active"><i class="fas fa-th-large"></i><a class="aside__text">THẺ TAGS</a></li>
+                <li class="aside__tag"><a class="aside__tag-item" href="#">thời trang</a><a class="aside__tag-item" href="#">máy khoan</a><a class="aside__tag-item" href="#">news</a><a class="aside__tag-item" href="#">công nghiệp</a><a class="aside__tag-item" href="#">xây dựng</a><a class="aside__tag-item" href="#">phay</a><a class="aside__tag-item" href="#">máy cắt</a><a class="aside__tag-item" href="#">hóa chất</a>
+                </li>
+              </ul>
+        </aside>
+      </div>
+      <div class="section-blog__content">
+        <div class="section-blog__article">
+              <article class="post"><img class="post__img" src="../imgs/blog/blog--1.png" alt="">
+                <div class="post__title">thế hệ máy khoan cắt cnc đầu tiên đã được tái sử dụng</div>
+                <div class="post__meta">
+                  <p class="post__meta-time">thứ năm, ngày 23/10/2015 8:00 AM</p>
+                  <div class="post__meta-author"><i class="post__meta-author--icon fas fa-user"></i>
+                    <p class="post__meta-author--inline">Đăng bởi  <span class="post__meta-author--highlight">design team</span></p>
+                  </div>
+                  <div class="post__meta-comment"><i class="post__meta-comment--icon fas fa-comments"></i>
+                    <p class="post__meta-comment--inline">12<span> Bình luận</span></p>
+                  </div>
+                </div>
+                <div class="post__text">
+                  <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure...</p>
+                </div>
+              </article>
+              <article class="post"><img class="post__img" src="../imgs/blog/blog--2.png" alt="">
+                <div class="post__title">thế hệ máy khoan cắt cnc đầu tiên đã được tái sử dụng</div>
+                <div class="post__meta">
+                  <p class="post__meta-time">thứ năm, ngày 23/10/2015 8:00 AM</p>
+                  <div class="post__meta-author"><i class="post__meta-author--icon fas fa-user"></i>
+                    <p class="post__meta-author--inline">Đăng bởi  <span class="post__meta-author--highlight">design team</span></p>
+                  </div>
+                  <div class="post__meta-comment"><i class="post__meta-comment--icon fas fa-comments"></i>
+                    <p class="post__meta-comment--inline">12<span> Bình luận</span></p>
+                  </div>
+                </div>
+                <div class="post__text">
+                  <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure...</p>
+                </div>
+              </article>
+              <article class="post"><img class="post__img" src="../imgs/blog/blog--4.png" alt="">
+                <div class="post__title">thế hệ máy khoan cắt cnc đầu tiên đã được tái sử dụng</div>
+                <div class="post__meta">
+                  <p class="post__meta-time">thứ năm, ngày 23/10/2015 8:00 AM</p>
+                  <div class="post__meta-author"><i class="post__meta-author--icon fas fa-user"></i>
+                    <p class="post__meta-author--inline">Đăng bởi  <span class="post__meta-author--highlight">design team</span></p>
+                  </div>
+                  <div class="post__meta-comment"><i class="post__meta-comment--icon fas fa-comments"></i>
+                    <p class="post__meta-comment--inline">12<span> Bình luận</span></p>
+                  </div>
+                </div>
+                <div class="post__text">
+                  <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure...</p>
+                </div>
+              </article>
+              <article class="post"><img class="post__img" src="../imgs/blog/blog--5.png" alt="">
+                <div class="post__title">thế hệ máy khoan cắt cnc đầu tiên đã được tái sử dụng</div>
+                <div class="post__meta">
+                  <p class="post__meta-time">thứ năm, ngày 23/10/2015 8:00 AM</p>
+                  <div class="post__meta-author"><i class="post__meta-author--icon fas fa-user"></i>
+                    <p class="post__meta-author--inline">Đăng bởi  <span class="post__meta-author--highlight">design team</span></p>
+                  </div>
+                  <div class="post__meta-comment"><i class="post__meta-comment--icon fas fa-comments"></i>
+                    <p class="post__meta-comment--inline">12<span> Bình luận</span></p>
+                  </div>
+                </div>
+                <div class="post__text">
+                  <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure...</p>
+                </div>
+              </article>
+        </div>
+        <div class="section-blog__page"><a class="section-blog__page--link" href="#">trang trước</a><a class="section-blog__page--link" href="#">1</a><a class="section-blog__page--link" href="#">2</a><a class="section-blog__page--link" href="#">3</a><a class="section-blog__page--link" href="#">trang cuối</a>
+        </div>
+      </div>
+    </section>
+    <footer class="footer-wrapper">
+      <div class="footer">
+        <div class="footer__top">
+              <div class="footer__top__block">
+                <div class="footer__top__heading"><i class="fas fa-th-large"></i>
+                  <h2 class="title">về chúng tôi</h2>
+                </div>
+                <div class="footer__top__content">
+                  <div class="footer__top__content--mt23"><i></i><a>Công ty Cổ Phần Công Nghệ DKT đã và đang khẳng định được vị trí hàng đầu trong lĩnh vực Thương mại điện tử.</a></div>
+                  <div class="footer__top__content--mt23"><i class="fas fa-map-marker-alt"></i><a>Tầng 4 - Tòa nhà Hanoi Group 442 Đội Cấn Ba Đình - Hà Nội</a></div>
+                  <div class="footer__top__content--mt23"><i class="fas fa-envelope"></i><a>support@dkt.com.vn</a></div>
+                  <div class="footer__top__content--mt23"><i class="fas fa-mobile-alt"></i><a>(84-4) 66558868 - (84-4) 37868904</a></div>
+                </div>
+              </div>
+              <div class="footer__top__block">
+                <div class="footer__top__heading"><i class="fas fa-th-large"></i>
+                  <h2 class="title">chính sách</h2>
+                </div>
+                <div class="footer__top__content">
+                  <div class="footer__top__content--mt23"><a>chính sách giao hàng</a></div>
+                  <div class="footer__top__content--mt23"><a>chính sách đổi sản phẩm</a></div>
+                  <div class="footer__top__content--mt23"><a>chính sách bảo hành</a></div>
+                  <div class="footer__top__content--mt23"><a>chính sách trả góp</a></div>
+                  <div class="footer__top__content--mt23"><a>giới thiệu hàng đổi trả</a></div>
+                  <div class="footer__top__content--mt23"><a>vận chuyển miễn phí</a></div>
+                </div>
+              </div>
+              <div class="footer__top__block">
+                <div class="footer__top__heading"><i class="fas fa-th-large"></i>
+                  <h2 class="title">dịch vụ &amp; hỗ trợ</h2>
+                </div>
+                <div class="footer__top__content">
+                  <div class="footer__top__content--mt23"><a>hệ thống cửa hàng</a></div>
+                  <div class="footer__top__content--mt23"><a>hướng dẫn mua hàng</a></div>
+                  <div class="footer__top__content--mt23"><a>hướng dẫn thanh toán</a></div>
+                  <div class="footer__top__content--mt23"><a>tích điểm đổi thưởng</a></div>
+                  <div class="footer__top__content--mt23"><a>dịch vụ đổi trả hàng</a></div>
+                  <div class="footer__top__content--mt23"><a>câu hỏi thường gặp</a></div>
+                </div>
+              </div>
+              <div class="footer__top__block">
+                <div class="footer__top__heading"><i class="fas fa-th-large"></i>
+                  <h2 class="title">tin tức -  sự kiện</h2>
+                </div>
+                <div class="footer__top__content">
+                  <div class="footer__top__content--mt23"><a>tin tức mới nhất</a></div>
+                  <div class="footer__top__content--mt23"><a>tin tức khuyến mại</a></div>
+                  <div class="footer__top__content--mt23"><a>tuyển dụng, đãi ngộ</a></div>
+                  <div class="footer__top__content--mt23"><a>download tài liệu</a></div>
+                  <div class="footer__top__content--mt23"><a>chương trình đối tác</a></div>
+                  <div class="footer__top__content--mt23"><a>nhà phát triển ứng dụng</a></div>
+                </div>
+              </div>
+              <div class="footer__top__block">
+                <div class="footer__top__heading"><i class="fas fa-th-large"></i>
+                  <h2 class="title">kết nôi</h2>
+                </div>
+                <div class="footer__top__content">
+                  <div class="footer__top__content--mt23"><i class="fab fa-facebook-f"></i><a>facebook</a></div>
+                  <div class="footer__top__content--mt23"><i class="fab fa-twitter"></i><a>twitter</a></div>
+                  <div class="footer__top__content--mt23"><i class="fab fa-google-plus-g"></i><a>google</a></div>
+                  <div class="footer__top__content--mt23"><i class="fab fa-skype"></i><a>skype</a></div>
+                  <div class="footer__top__content--mt23"><i class="fab fa-instagram"></i><a>instagram</a></div>
+                </div>
+              </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__bottom__pay">
+            <p class="footer__bottom__title">Thanh toán :</p>
+            <div class="pay__grid"><img src="../imgs/pay/pay--1.png"><img src="../imgs/pay/pay--2.png"><img src="../imgs/pay/pay--3.png"><img src="../imgs/pay/pay--4.png"><img src="../imgs/pay/pay--5.png"><img src="../imgs/pay/pay--6.png"><img src="../imgs/pay/pay--7.png"><img src="../imgs/pay/pay--8.png">
+            </div>
+          </div>
+          <div class="footer__bottom__ad">
+            <p class="footer__bottom__title">Giải đáp nhanh :</p>
+                <div class="advisory">
+                  <div class="advisory__icon--radius"><i class="fas fa-phone rotate90"></i></div>
+                  <div class="advisory__content">
+                    <p class="advisory__content-title">Tư vấn miễn phí (24/7)</p>
+                    <h3 class="advisory__content-phone">1900 650 650</h3>
+                  </div>
+                </div>
+                <div class="advisory">
+                  <div class="advisory__icon--radius"><i class="fas fa-comments"></i></div>
+                  <div class="advisory__content">
+                    <p class="advisory__content-title">Góp ý - phản hồi - thắc mắc</p>
+                    <h3 class="advisory__content-phone">1900 650 650</h3>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>function myFunc() {
+    var x = document.getElementById('collapse');
+    if (x.className === 'navbar__menu') {
+        x.className += ' responsive';
+    }else {
+        x.className = 'navbar__menu';
+    }
+}
+    </script>
+  </body>
+</html>

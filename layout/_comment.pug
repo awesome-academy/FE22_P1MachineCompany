@@ -1,0 +1,11 @@
+mixin comment(imgs, name, time, text)
+    -for(var i=0; i<imgs.length; i++){
+        .comment-block
+            img.comment-img(src= imgs[i], alt="")
+            .comment__content
+                p.comment__content-name= name[i]
+                p.comment__content-time= time[i]
+                a.comment__reply(href="#") trả lời
+                p.comment__content-text= text[i]
+                
+    -}

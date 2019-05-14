@@ -1,0 +1,41 @@
+.comment-block {
+    margin-bottom: 30px;
+    .comment {
+        &-img {
+            border: 1px solid $--border--slide;
+            padding: 4px;
+        }
+        &__content {
+            &-name {
+                @include heading(1.4rem, $--secondary, 700);
+                margin-bottom: 13px;
+            }
+            &-time {
+                @include heading(1.4rem, #a1a1a1, 300);
+                text-transform: initial;
+                font-style: italic;
+                &::first-letter {
+                    text-transform: uppercase;
+                }
+            }
+            &-text {
+                @include heading(1.3rem, $--border, 300);
+                text-transform: initial;
+                font-style: italic;
+            }
+        }
+    }
+    &:nth-child(3) {
+        margin-left: 30px;
+    }
+    @media (min-width: 768px) {
+        display: flex;
+        margin-bottom: 50px;
+        .comment-img {
+            margin-right: 20px;
+        }
+        &:nth-child(3) {
+            margin-left: 120px;
+        }
+    }
+}
