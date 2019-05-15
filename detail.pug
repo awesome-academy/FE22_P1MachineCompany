@@ -1,0 +1,54 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        link(rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+            crossorigin="anonymous")
+        link(rel="stylesheet" href="./style/detail.css")
+        title Machine Company
+    body
+        include layout/header.pug
+        include layout/breadcrumb.pug
+        include layout/section__head.pug
+        include layout/aside.pug
+        +breadcrumb("danh mục sản phẩm","máy khoan CNC 3D")
+        include layout/new__receive.pug
+        include layout/_var__listProduct.pug
+        include layout/_select.pug
+        include layout/_detail.pug
+        section.section-detail
+            .section__content
+                .aside-list
+                    aside.aside
+                        +asideList("fas fa-bars",
+                                "DANH MỤC SẢN PHẨM",
+                                "fas fa-th-large",
+                                productPortfolio)
+                    aside.aside
+                        +asideListProduct("fas fa-gift",
+                                        "SẢN PHẨM KHUYẾN MẠI",
+                                        imgsSale,
+                                        names,
+                                        prices)
+                +detail(img,
+                        detailImg,
+                        title,
+                        star,
+                        rate,
+                        price,
+                        text,
+                        size,
+                        color)
+                    section.section-gridproduct
+                        +sectionHead("fas fa-th-large", "sản phẩm tương tự")
+                        .product-grid
+                            .product-grid__content
+                                +productCard(imgs, prices, titles, stars, rates)
+        include layout/footer.pug
+        script
+            include script/navScript.js
+            include script/tab.js

@@ -1,0 +1,79 @@
+include _var__detail__product.pug
+include _var__select.pug
+include _var__saleProduct.pug
+include _var__tabContent.pug
+include section__head.pug
+include _tab.pug
+include aside.pug
+mixin productCard(img, price, title, star, rate)
+    -for(var i=0; i<img.length; i++){
+        .product__card
+            .card
+                img.card__img(src= img[i])
+                h3.card__price= price[i]
+                p.card__title= title[i]
+                .card__evaluate
+                    -for(var j=0;j<star[i];j++){
+                        i.fas.fa-star.card__evaluate-star
+                    -}
+                    p.card__evaluate-rate (#{rate[i]}) đánh giá
+                .card__btn
+                    a(href="#").card__btn--buy mua ngay
+                    a(href="#").card__btn--info xem chi tiết
+    -}
+mixin detail(img, detailImg, title, star, rate, price, text, size, color)
+    section.main-detail
+        .flex
+            .main-img
+                img(src= img, alt="#")
+                .main-img--inline
+                    each val in detailImg
+                        img(src= val, alt="#")
+            .main-content
+                .main-content--top
+                    p.content__title= title
+                    .content__rate.content__rate--inline
+                        -for(var i=0; i<star; i++){
+                            i.fas.fa-star
+                        -}
+                        p.content__comment (#{rate}) đánh giá
+                        a.content__write(href="#") gửi bình luận của bạn
+                    p.content__price gny: #{price}
+                .main-content--center
+                    p.content__info Thông tin sản phẩm
+                    p.content__text= text
+                .main-content--select
+                    div
+                        p.select__title Size:
+                        select.select__option
+                            each val in size
+                                option(value= val): a(href="#")= val
+                    div
+                        p.select__title Màu sắc:
+                        select.select__option
+                            each val in color
+                                option(value= val): a(href="#")= val
+                .main-content--amount
+                    input.content__amount(type="number" 
+                                        min="1"
+                                        max="10"
+                                        value="1")
+                    a.content__btn(href="#") mua ngay
+                .main-content--social
+                    .content__social-item.content__social-item--blue
+                        i.fab.fa-facebook-square
+                        p Like
+                    p.content__number 0
+                    .content__social-item.content__social-item--blueover
+                        i.fab.fa-twitter 
+                        p Twitter
+                    .content__social-item.content__social-item--transparent
+                        i.fab.fa-google-plus-g
+                    p.content__number 0
+                    .content__social-item.content__social-item--orange
+                        i.fas.fa-plus-square
+                        p Share
+        .main-tab
+            +tab(idButton, idContent, titleButton,textInfo)
+        if block
+            block
