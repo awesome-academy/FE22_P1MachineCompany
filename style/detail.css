@@ -341,7 +341,7 @@ button {
 
 .header__navbar__cart::after {
   position: absolute;
-  content: "0";
+  content: attr(content-value);
   font-size: 1.4rem;
   color: #fff;
   line-height: 2.2rem;
@@ -358,6 +358,10 @@ button {
   transition: .7s;
   background-color: #f5bd10;
   color: #fff;
+}
+
+.header__navbar--link {
+  display: block;
 }
 
 @media only screen and (min-width: 320px) {

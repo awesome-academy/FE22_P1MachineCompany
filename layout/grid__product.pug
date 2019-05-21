@@ -57,8 +57,7 @@ section.section-gridproduct
                 .product-grid__list-type
                     i.fas.fa-bars.product-grid__list-type--item
                     i.fas.fa-th.product-grid__list-type--item
-            .product-grid__content
-                +productCard(imgs, prices, titles, stars, rates)
+            .product-grid__content#product-grid__content
             .product-grid__page
                 each value in page
                     a.product-grid__page--link(href="#")= value

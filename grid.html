@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="./style/grid.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="script/getAPI.js"></script>
     <title>Machine Company</title>
   </head>
   <body>
@@ -37,7 +39,7 @@
       </div>
       <div class="header__navbar--wrapper">
         <div class="header__navbar">
-          <nav class="header__navbar__menu" id="collapse"><a class="header__navbar__menu-item" onclick="myFunc()"><i class="fa fa-bars"></i></a><a class="header__navbar__menu-item" href="#">trang chủ</a><a class="header__navbar__menu-item" href="#">giới thiệu</a><a class="header__navbar__menu-item" href="#">sản phẩm</a><a class="header__navbar__menu-item" href="#">tin khuyến mại</a><a class="header__navbar__menu-item" href="#">dịch vụ</a><a class="header__navbar__menu-item" href="#">liên hệ</a></nav><i class="header__navbar__cart fas fa-shopping-basket"></i>
+          <nav class="header__navbar__menu" id="collapse"><a class="header__navbar__menu-item" onclick="myFunc()"><i class="fa fa-bars"></i></a><a class="header__navbar__menu-item" href="#">trang chủ</a><a class="header__navbar__menu-item" href="#">giới thiệu</a><a class="header__navbar__menu-item" href="grid.html">sản phẩm</a><a class="header__navbar__menu-item" href="#">tin khuyến mại</a><a class="header__navbar__menu-item" href="#">dịch vụ</a><a class="header__navbar__menu-item" href="#">liên hệ</a></nav><a class="header__navbar--link" href="shoping.html">   <i class="header__navbar__cart fas fa-shopping-basket"></i></a>
         </div>
       </div>
     </header>
@@ -152,188 +154,7 @@
                 </div>
             <div class="product-grid__list-type"><i class="fas fa-bars product-grid__list-type--item"></i><i class="fas fa-th product-grid__list-type--item"></i></div>
           </div>
-          <div class="product-grid__content">
-                <div class="product__card">
-                  <div class="card"><img class="card__img" src="../imgs/high--product/high--product-1.png">
-                    <h3 class="card__price">1.550.000 Đ</h3>
-                    <p class="card__title">máy khoan BLACK DECKER</p>
-                    <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
-                      <p class="card__evaluate-rate">(12) đánh giá</p>
-                    </div>
-                    <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
-                  </div>
-                </div>
-                <div class="product__card">
-                  <div class="card"><img class="card__img" src="../imgs/high--product/high--product-1.png">
-                    <h3 class="card__price">1.550.000 Đ</h3>
-                    <p class="card__title">máy khoan BLACK DECKER</p>
-                    <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
-                      <p class="card__evaluate-rate">(12) đánh giá</p>
-                    </div>
-                    <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
-                  </div>
-                </div>
-                <div class="product__card">
-                  <div class="card"><img class="card__img" src="../imgs/high--product/high--product-1.png">
-                    <h3 class="card__price">1.550.000 Đ</h3>
-                    <p class="card__title">máy khoan BLACK DECKER</p>
-                    <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
-                      <p class="card__evaluate-rate">(12) đánh giá</p>
-                    </div>
-                    <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
-                  </div>
-                </div>
-                <div class="product__card">
-                  <div class="card"><img class="card__img" src="../imgs/high--product/high--product-1.png">
-                    <h3 class="card__price">1.550.000 Đ</h3>
-                    <p class="card__title">máy khoan BLACK DECKER</p>
-                    <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
-                      <p class="card__evaluate-rate">(12) đánh giá</p>
-                    </div>
-                    <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
-                  </div>
-                </div>
-                <div class="product__card">
-                  <div class="card"><img class="card__img" src="../imgs/high--product/high--product-1.png">
-                    <h3 class="card__price">1.550.000 Đ</h3>
-                    <p class="card__title">máy khoan BLACK DECKER</p>
-                    <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
-                      <p class="card__evaluate-rate">(12) đánh giá</p>
-                    </div>
-                    <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
-                  </div>
-                </div>
-                <div class="product__card">
-                  <div class="card"><img class="card__img" src="../imgs/high--product/high--product-1.png">
-                    <h3 class="card__price"></h3>
-                    <p class="card__title">máy khoan BLACK DECKER</p>
-                    <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
-                      <p class="card__evaluate-rate">(12) đánh giá</p>
-                    </div>
-                    <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
-                  </div>
-                </div>
-                <div class="product__card">
-                  <div class="card"><img class="card__img" src="../imgs/high--product/high--product-1.png">
-                    <h3 class="card__price"></h3>
-                    <p class="card__title">máy khoan BLACK DECKER</p>
-                    <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
-                      <p class="card__evaluate-rate">(12) đánh giá</p>
-                    </div>
-                    <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
-                  </div>
-                </div>
-                <div class="product__card">
-                  <div class="card"><img class="card__img" src="../imgs/high--product/high--product-1.png">
-                    <h3 class="card__price"></h3>
-                    <p class="card__title">máy khoan BLACK DECKER</p>
-                    <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
-                      <p class="card__evaluate-rate">(12) đánh giá</p>
-                    </div>
-                    <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
-                  </div>
-                </div>
-                <div class="product__card">
-                  <div class="card"><img class="card__img" src="../imgs/high--product/high--product-1.png">
-                    <h3 class="card__price"></h3>
-                    <p class="card__title">máy khoan BLACK DECKER</p>
-                    <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
-                      <p class="card__evaluate-rate">(12) đánh giá</p>
-                    </div>
-                    <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
-                  </div>
-                </div>
-                <div class="product__card">
-                  <div class="card"><img class="card__img" src="../imgs/high--product/high--product-1.png">
-                    <h3 class="card__price"></h3>
-                    <p class="card__title">máy khoan BLACK DECKER</p>
-                    <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
-                      <p class="card__evaluate-rate">(12) đánh giá</p>
-                    </div>
-                    <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
-                  </div>
-                </div>
-                <div class="product__card">
-                  <div class="card"><img class="card__img" src="../imgs/high--product/high--product-1.png">
-                    <h3 class="card__price"></h3>
-                    <p class="card__title">máy khoan BLACK DECKER</p>
-                    <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
-                      <p class="card__evaluate-rate">(12) đánh giá</p>
-                    </div>
-                    <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
-                  </div>
-                </div>
-                <div class="product__card">
-                  <div class="card"><img class="card__img" src="../imgs/high--product/high--product-1.png">
-                    <h3 class="card__price"></h3>
-                    <p class="card__title">máy khoan BLACK DECKER</p>
-                    <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
-                      <p class="card__evaluate-rate">(12) đánh giá</p>
-                    </div>
-                    <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
-                  </div>
-                </div>
-                <div class="product__card">
-                  <div class="card"><img class="card__img" src="../imgs/high--product/high--product-1.png">
-                    <h3 class="card__price"></h3>
-                    <p class="card__title">máy khoan BLACK DECKER</p>
-                    <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
-                      <p class="card__evaluate-rate">(12) đánh giá</p>
-                    </div>
-                    <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
-                  </div>
-                </div>
-                <div class="product__card">
-                  <div class="card"><img class="card__img" src="../imgs/high--product/high--product-1.png">
-                    <h3 class="card__price"></h3>
-                    <p class="card__title">máy khoan BLACK DECKER</p>
-                    <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
-                      <p class="card__evaluate-rate">(12) đánh giá</p>
-                    </div>
-                    <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
-                  </div>
-                </div>
-                <div class="product__card">
-                  <div class="card"><img class="card__img" src="../imgs/high--product/high--product-1.png">
-                    <h3 class="card__price"></h3>
-                    <p class="card__title">máy khoan BLACK DECKER</p>
-                    <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
-                      <p class="card__evaluate-rate">(12) đánh giá</p>
-                    </div>
-                    <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
-                  </div>
-                </div>
-                <div class="product__card">
-                  <div class="card"><img class="card__img" src="../imgs/high--product/high--product-1.png">
-                    <h3 class="card__price"></h3>
-                    <p class="card__title">máy khoan BLACK DECKER</p>
-                    <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
-                      <p class="card__evaluate-rate">(12) đánh giá</p>
-                    </div>
-                    <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
-                  </div>
-                </div>
-                <div class="product__card">
-                  <div class="card"><img class="card__img" src="../imgs/high--product/high--product-1.png">
-                    <h3 class="card__price"></h3>
-                    <p class="card__title">máy khoan BLACK DECKER</p>
-                    <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
-                      <p class="card__evaluate-rate">(12) đánh giá</p>
-                    </div>
-                    <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
-                  </div>
-                </div>
-                <div class="product__card">
-                  <div class="card"><img class="card__img" src="../imgs/high--product/high--product-1.png">
-                    <h3 class="card__price"></h3>
-                    <p class="card__title">máy khoan BLACK DECKER</p>
-                    <div class="card__evaluate"><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i><i class="fas fa-star card__evaluate-star"></i>
-                      <p class="card__evaluate-rate">(12) đánh giá</p>
-                    </div>
-                    <div class="card__btn"><a class="card__btn--buy" href="#">mua ngay</a><a class="card__btn--info" href="#">xem chi tiết</a></div>
-                  </div>
-                </div>
-          </div>
+          <div class="product-grid__content" id="product-grid__content"></div>
           <div class="product-grid__page"><a class="product-grid__page--link" href="#">trang trước</a><a class="product-grid__page--link" href="#">1</a><a class="product-grid__page--link" href="#">2</a><a class="product-grid__page--link" href="#">3</a><a class="product-grid__page--link" href="#">trang cuối</a>
           </div>
         </div>
@@ -431,8 +252,9 @@
         </div>
       </div>
     </footer>
-    <script>
-      function myFunc() {
+    <script type="text/script" src="script/cart.js"></script>
+    <script>var $ = document.querySelector.bind(document);
+function myFunc() {
     var x = document.getElementById('collapse');
     if (x.className === 'navbar__menu') {
         x.className += ' responsive';
@@ -440,42 +262,15 @@
         x.className = 'navbar__menu';
     }
 }
-onload = start();
-function start(){
-    var i = 1;
-    function Move(){
-        i = (i%3)+1;
-        document.getElementById('i'+i).checked = true;
-    }
-    setInterval(Move, 3000);
+function cartIcon(){
+	if(localStorage.length == 0){
+		$(".header__navbar__cart").setAttribute("content-value", 0);
+	}else {
+		var local = localStorage.getItem("cartItem").split(",").map(Number).length;
+		$(".header__navbar__cart").setAttribute("content-value", local);
+	}
 }
-function changeIt(i){
-    document.getElementById(`i${(i === 3) ? 1 : i+1}`).checked = true;
-}
-window.onresize = function(){
-var hei = document.getElementsByClassName("slider__img-move")[0].clientHeight;
-document.getElementById("slider").style.height = `${hei}px`;
-}
-var items = document.getElementsByClassName("slider-corp__list-item")
-var list = document.getElementById("slider-corp__list")
-onload = slide();
-function moveLeft(){
-    list.insertBefore(items[4], list.childNodes[0])
-     list.style.left = "100px";
-    for(var i = 0; i< items.length; i++){
-      items[i].style.animation = "scroll .7s ease-in-out";
-    }
-  }
-function moveRight(){
-    list.insertBefore(items[0], null);
-    list.style.animation = "scroll .7s ease-in-out";
-    for(var i = 0; i< items.length; i++){
-      items[i].style.animation = "scroll .7s ease-in-out";
-    }
-  }
-function slide(){
-  setInterval(moveRight, 2000);
-}
+cartIcon();
     </script>
   </body>
 </html>
