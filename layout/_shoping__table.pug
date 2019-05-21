@@ -1,25 +1,47 @@
 include _var__shoping.pug
-.shoping-wrapper
-    table.shoping
-        thead
-            tr.shoping__heading
-                each val in column
-                    th.shoping__th= val
-        tbody
-    .payment.payment--right
-        table.payment-table
-            tr.payment-table__row
-                td tổng tiền:
-                td#total-price
-                    span Đ
-            tr.payment-table__row
-                td thuế(vat):
-                td#vat-price
-                    span Đ
-            tr.payment-table__row
-                td thanh toán:
-                td#payment-price.payment-table__row--danger
-                    span Đ
-        .payment-btn
-            a.payment-btn--dark(href="grid.html") tiếp tục mua hàng
-            a.payment-btn--bright(href="#") thanh toán
+include _var__formShoping.pug
+include _mixin__form.pug
+form#form.shoping-wrapper
+    .step-block
+        span.step
+        span.step
+        span.step
+    .tab
+        table.shoping
+            thead
+                tr.shoping__heading
+                    each val in column
+                        th.shoping__th= val
+            tbody
+        .payment.payment--right
+            table.payment-table
+                tr.payment-table__row
+                    td tổng tiền:
+                    td#total-price
+                        span Đ
+                tr.payment-table__row
+                    td thuế(vat):
+                    td#vat-price
+                        span Đ
+                tr.payment-table__row
+                    td thanh toán:
+                    td#payment-price.payment-table__row--danger
+                        span Đ
+    .tab
+        .signin
+            .login-form
+                +logForm(label, idInput, type)
+    .tab
+        .signin
+            .login-form#resultForm
+                +logForm(label,idInputResult, type)
+        table.shoping
+            thead
+                tr.shoping__heading
+                    each val in column
+                        th.shoping__th= val
+            tbody#resultTable
+    .payment-btn
+        a#prevBtn.payment-btn--dark(onclick="nextPrev(-1)") trở lại
+        a.payment-btn--dark(href="grid.html") tiếp tục mua hàng
+        a#nextBtn.payment-btn--bright(onclick="nextPrev(1)") thanh toán

@@ -78,6 +78,9 @@ th,td {
         height: 40px;
         line-height: 40px;
         float: right;
+        &:hover {
+            cursor: pointer;
+        }
         &--dark {
             width: 196px;
             background: $--primary;
@@ -93,4 +96,30 @@ th,td {
             margin-left: auto;
         }
     }
+}
+.tab {
+    display: none;
+}
+.step {
+    width: 15rem;
+    height: .5rem;
+    background-color: $--border--slide;
+    display: inline-block;
+    margin: 0 1rem;
+    opacity: .5;
+    &-block {
+        width: 100%;
+        display: inline-flex;
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+}
+.finish {
+    background-color: #f7dc88;
+}
+.sactive {
+    background-color: $--primary;
+}
+.invalid {
+    background-color: #ffdddd;
 }
