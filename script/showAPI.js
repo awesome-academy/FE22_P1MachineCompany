@@ -41,7 +41,6 @@ function getDataCart(){
 		.catch((err) => {
 			console.log(err);
 		})
-
 }
 function removeItemCart(){
 	var btn = $$(".removeBtn");
