@@ -9,7 +9,6 @@ if(localStorage.getItem("cartItem") == null){
 }else {
 	cart = localStorage.getItem("cartItem").split(",").map(Number);
 }
-console.log(cart)
 getData();
 function getData(){
 	var url = "http://localhost:3000/grid";
@@ -58,7 +57,7 @@ function getCartItem(){
 	}
 }
 function cartIcon(){
-	if(localStorage.length == 0){
+	if(localStorage.getItem("cartItem") == null){
 		$(".header__navbar__cart").setAttribute("content-value", 0);
 	}else {
 		var local = localStorage.getItem("cartItem").split(",").map(Number).length;

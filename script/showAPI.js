@@ -6,27 +6,27 @@ removeItemCart();
 //updateCart()
 function updateCart(){
 	var inputCount = $$(".shoping__row-input");
-	var btn = $$(".removeBtn");
-	var storageValue = localStorage.getItem("cartItem").split(",").map(Number);
-	for(var i=0; i< inputCount.length; i++){
-		inputCount[i].addEventListener("keyup", function(element){
-			var id = this.getAttribute("data-set")
-			var index = this.getAttribute("data-index")
-			var value = this.value;
-			if(element.keyCode == 13){
-				//change local storage
-				var removed = removeId(storageValue, id);
-				for(var i=0; i < this.value; i++){
-					removed.push(id);
+	if(localStorage.length != 0){
+		var storageValue = localStorage.getItem("cartItem").split(",").map(Number);
+		for(var i=0; i< inputCount.length; i++){
+			inputCount[i].addEventListener("keyup", function(element){
+				var id = this.getAttribute("data-set")
+				var index = this.getAttribute("data-index")
+				if(element.keyCode == 13){
+					//change local storage
+					var removed = removeId(storageValue, id);
+					for(var i=0; i < this.value; i++){
+						removed.push(id);
+					}
+					localStorage.setItem("cartItem", removed)
+					// Change total value
+					var getPrice = $$(".product-price")[0].textContent.split(".").join("");
+					$$(".total-price")[index].textContent = stringToPriceFormated(Number(getPrice)*this.value);
+					getDataCart();
 				}
-				localStorage.setItem("cartItem", removed)
-				// Change total value
-				var getPrice = $$(".product-price")[0].textContent.split(".").join("");
-				$$(".total-price")[index].textContent = stringToPriceFormated(Number(getPrice)*this.value);
-				getDataCart();
-			}
-			
-		})
+				
+			})
+		}
 	}
 }
 function getDataCart(){
@@ -34,31 +34,68 @@ function getDataCart(){
 	axios.get(`http://localhost:3000/grid?${urlId}`)
 		.then((res) => {
 			renderCart(res.data);
+			renderResultTableCart(res.data);
 			PaymentPrice(res.data);
 			removeItemCart();
+			cartIcon();
 			updateCart();
+			
+		})
+		.catch((err) => {
+			console.log(err);
+			window.location.href = "404.html";
 		})
 		.catch((err) => {
 			console.log(err);
 		})
-
 }
 function removeItemCart(){
 	var btn = $$(".removeBtn");
-	var storageValue = localStorage.getItem("cartItem").split(",").map(Number);
-	for(var i = 0; i< btn.length; i++){
-		var valueBtn = btn[i].getAttribute("value");
-		btn[i].addEventListener("click", function(){
-			if(confirm("Bạn có muốn xóa sản phẩm này ?")){
-				var removed = storageValue.filter(function(value){
-						return value != valueBtn;
-					});
-				localStorage.setItem("cartItem", removed);
-				getDataCart();
-
-			}
-		})
+	if(localStorage.length != 0){
+		var storageValue = localStorage.getItem("cartItem").split(",").map(Number);
+		for(var i = 0; i< btn.length; i++){
+			var valueBtn = btn[i].getAttribute("value");
+			btn[i].addEventListener("click", function(){
+				if(confirm("Bạn có muốn xóa sản phẩm này ?")){
+					var removed = storageValue.filter(function(value){
+							return value != valueBtn;
+						});
+					if(removed.length == 0){
+						localStorage.clear();
+					}else{
+						localStorage.setItem("cartItem", removed);
+					}
+					getDataCart();
+				}
+			})
+		}
 	}
+
+}
+function renderResultTableCart(input){
+	var arrayProductCart = getLocalStorageProduct();
+	var arr = [];
+	for(var i=0; i < arrayProductCart.length; i++){
+		var priceToNum = Number(input[i].price.split('.').join(""))*arrayProductCart[i];
+		console.log(priceToNum)
+		var priceFormat = stringToPriceFormated(priceToNum);
+		var retrn = `<tr class="shoping__row">
+					<th>${i+1}</th>
+					 <th><img src="${input[i].img}"></th>
+					 <th>${input[i].title}</th>
+					 <th><span class="product-price">${input[i].price}</span> <span> Đ</span></th>
+					 <th>
+		              <input class="shoping__row-input" type="number" value="${arrayProductCart[i]}" readonly="readonly"s>
+		             </th>
+		             <th><span class="total-price">${priceFormat}</span><span> Đ</span></th>
+		             <th><a class="removeBtn" value ="${input[i].id}">
+		             		<i class="shoping__row--icon fas fa-times"></i>
+		             	</a>
+		             </th>
+				</tr>`;
+		arr.push(retrn);
+	}
+	$("#resultTable").innerHTML = arr.join(" ");
 
 }
 function renderCart(input){
@@ -88,19 +125,27 @@ function renderCart(input){
 }
 function getLocalStorage(){
 	//convert to array number
-	var arrayCartItem = localStorage.getItem("cartItem").split(",").map(Number);
-	var keyItem = getKeyID(countOccurrences(arrayCartItem));
-	var urlId = keyItem.map((item) => {
-		return `id=${item}&`;
-	})
-	return urlId.join("");
+	if(localStorage.length == 0) {
+		return 'id=null'
+	}else {
+		var arrayCartItem = localStorage.getItem("cartItem").split(",").map(Number);
+		var keyItem = getKeyID(countOccurrences(arrayCartItem));
+		var urlId = keyItem.map((item) => {
+			return `id=${item}&`;
+		})
+		return urlId.join("");
+	}
 
 }
 function getLocalStorageProduct(){
 	//convert to array number
-	var arrayCartItem = localStorage.getItem("cartItem").split(",").map(Number);
-	var valueID = getValueID(countOccurrences(arrayCartItem));
-	return valueID;
+	if(localStorage.length == 0){
+		return [];
+	}else{
+		var arrayCartItem = localStorage.getItem("cartItem").split(",").map(Number);
+		var valueID = getValueID(countOccurrences(arrayCartItem));
+		return valueID;
+	}
 
 }
 function countOccurrences(arr) {
@@ -134,8 +179,7 @@ function getValueID(obj){
 
 }
 function stringToPriceFormated(num){
-	return new Intl.NumberFormat('VND', 
-		{ maximumSignificantDigits:  3}).format(num);
+	return new Intl.NumberFormat('de-DE', { style: 'decimal', currency: 'VND' }).format(num)
 
 }
 function PaymentPrice(input){
@@ -160,4 +204,12 @@ function removeId(arr, itemRemove){
 	})
 	return filtered;
 
+}
+function cartIcon(){
+	if(localStorage.getItem("cartItem") == null){
+		$(".header__navbar__cart").setAttribute("content-value", 0);
+	}else {
+		var local = localStorage.getItem("cartItem").split(",").map(Number).length;
+		$(".header__navbar__cart").setAttribute("content-value", local);
+	}
 }

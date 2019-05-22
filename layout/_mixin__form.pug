@@ -14,3 +14,10 @@ mixin logForm(label, idInput, type, formcheck, missPass, btn)
         .form__btn
             a.form__btn--dark(href="#")= btn[0]
             a.form__btn--bright(href="#")= btn[1]
+mixin showForm(label, idInput, type)
+    .form-grid
+        -for(var i=0; i<label.length; i++){
+            .form-group
+                label.form-group__label(for= idInput[i])= label[i]
+                input.form-group__input.input-value(id= idInput[i], type= type[i])
+        -}

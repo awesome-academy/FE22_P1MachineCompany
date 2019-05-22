@@ -48,39 +48,104 @@
             <li class="breadcrumb-item"><a href="#">giỏ hàng</a></li>
           </ol>
         </nav>
-    <div class="shoping-wrapper">
-      <table class="shoping">
-        <thead>
-          <tr class="shoping__heading">
-            <th class="shoping__th">stt</th>
-            <th class="shoping__th">sản phẩm</th>
-            <th class="shoping__th">thông tin</th>
-            <th class="shoping__th">đơn giá</th>
-            <th class="shoping__th">số lượng</th>
-            <th class="shoping__th">thành tiền</th>
-            <th class="shoping__th">xóa</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-      <div class="payment payment--right">
-        <table class="payment-table">
-          <tr class="payment-table__row">
-            <td>tổng tiền:</td>
-            <td id="total-price"><span>Đ</span></td>
-          </tr>
-          <tr class="payment-table__row">
-            <td>thuế(vat):</td>
-            <td id="vat-price"><span>Đ</span></td>
-          </tr>
-          <tr class="payment-table__row">
-            <td>thanh toán:</td>
-            <td class="payment-table__row--danger" id="payment-price"><span>Đ</span></td>
-          </tr>
+    <form class="shoping-wrapper" id="form">
+      <div class="step-block"><span class="step"></span><span class="step"></span><span class="step"></span></div>
+      <div class="tab">
+        <table class="shoping">
+          <thead>
+            <tr class="shoping__heading">
+              <th class="shoping__th">stt</th>
+              <th class="shoping__th">sản phẩm</th>
+              <th class="shoping__th">thông tin</th>
+              <th class="shoping__th">đơn giá</th>
+              <th class="shoping__th">số lượng</th>
+              <th class="shoping__th">thành tiền</th>
+              <th class="shoping__th">xóa</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
         </table>
-        <div class="payment-btn"><a class="payment-btn--dark" href="grid.html">tiếp tục mua hàng</a><a class="payment-btn--bright" href="#">thanh toán</a></div>
+        <div class="payment payment--right">
+          <table class="payment-table">
+            <tr class="payment-table__row">
+              <td>tổng tiền:</td>
+              <td id="total-price"><span>Đ</span></td>
+            </tr>
+            <tr class="payment-table__row">
+              <td>thuế(vat):</td>
+              <td id="vat-price"><span>Đ</span></td>
+            </tr>
+            <tr class="payment-table__row">
+              <td>thanh toán:</td>
+              <td class="payment-table__row--danger" id="payment-price"><span>Đ</span></td>
+            </tr>
+          </table>
+        </div>
       </div>
-    </div>
+      <div class="tab">
+        <div class="signin">
+          <div class="login-form">
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label class="form-group__label" for="idName">Họ và tên</label>
+                    <input class="form-group__input" id="idName" type="text">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-group__label" for="inputPhone">Số điện thoại</label>
+                    <input class="form-group__input" id="inputPhone" type="text">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-group__label" for="inputEmail">Email</label>
+                    <input class="form-group__input" id="inputEmail" type="email">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-group__label" for="inputAddress">Địa chỉ</label>
+                    <input class="form-group__input" id="inputAddress" type="text">
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab">
+        <div class="signin">
+          <div class="login-form" id="resultForm">
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label class="form-group__label" for="idNameResult">Họ và tên</label>
+                    <input class="form-group__input" id="idNameResult" type="text">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-group__label" for="inputPhoneResult">Số điện thoại</label>
+                    <input class="form-group__input" id="inputPhoneResult" type="text">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-group__label" for="inputEmailResult">Email</label>
+                    <input class="form-group__input" id="inputEmailResult" type="email">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-group__label" for="inputAddressResult">Địa chỉ</label>
+                    <input class="form-group__input" id="inputAddressResult" type="text">
+                  </div>
+                </div>
+          </div>
+        </div>
+        <table class="shoping">
+          <thead>
+            <tr class="shoping__heading">
+              <th class="shoping__th">stt</th>
+              <th class="shoping__th">sản phẩm</th>
+              <th class="shoping__th">thông tin</th>
+              <th class="shoping__th">đơn giá</th>
+              <th class="shoping__th">số lượng</th>
+              <th class="shoping__th">thành tiền</th>
+              <th class="shoping__th">xóa</th>
+            </tr>
+          </thead>
+          <tbody id="resultTable"></tbody>
+        </table>
+      </div>
+      <div class="payment-btn"><a class="payment-btn--dark" id="prevBtn" onclick="nextPrev(-1)">trở lại</a><a class="payment-btn--dark" href="grid.html">tiếp tục mua hàng</a><a class="payment-btn--bright" id="nextBtn" onclick="nextPrev(1)">thanh toán</a></div>
+    </form>
     <footer class="footer-wrapper">
       <div class="footer">
         <div class="footer__top">
@@ -182,16 +247,8 @@ function myFunc() {
         x.className = 'navbar__menu';
     }
 }
-function cartIcon(){
-	if(localStorage.length == 0){
-		$(".header__navbar__cart").setAttribute("content-value", 0);
-	}else {
-		var local = localStorage.getItem("cartItem").split(",").map(Number).length;
-		$(".header__navbar__cart").setAttribute("content-value", local);
-	}
-}
-cartIcon();
     </script>
     <script src="script/showAPI.js"></script>
+    <script src="script/steps.js"></script>
   </body>
 </html>
