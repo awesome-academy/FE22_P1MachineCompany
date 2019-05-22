@@ -167,7 +167,7 @@
             position: relative;
             &::after {
                 position: absolute;
-                content: "0";
+                content: attr(content-value);
                 font-size: 1.4rem;
                 color: #fff;
                 line-height: 2.2rem;
@@ -181,6 +181,9 @@
             &:hover {
                 @include hover__primary;
             }
+        }
+        &--link {
+            display: block;
         }
     }
     @include responsive_320{
